@@ -4,7 +4,7 @@
 
 <head>
 
-	<title>Alison Christian </title>
+	<title>Alison Christian</title>
 
 	<!-- link para os outros arquivos CSS -->
 	<link href="assets/css/main.css" rel="stylesheet">
@@ -23,11 +23,19 @@
 		  }
 		  setTimeout("efeito()", 130);
 		}
-		
+
 	</script>
-	
+
+	<!-- Escondendo o body com o atributo "display" -->
 	<script type="text/javascript">
-		window.alert('Este website está em construção!');
+
+		function esc(el) {
+        var display = document.getElementById(el).style.display;
+        if(display == "none")
+            document.getElementById(el).style.display = 'block';
+        else
+            document.getElementById(el).style.display = 'none';
+    }
 	</script>
 
 	<meta charset="UTF-8">
@@ -40,139 +48,252 @@
 
 </head>
 
-<body onload="efeito()">
+<body onload="efeito(), esc('contteiner')">
 
-	<!-- NavBar (MENU) -->
+	<div id="contteiner">
 
-	<ul class="nav nav-pills nav-fill">
-		<li class="nav-item">
-		  <a class="nav-link" href="index.html" alt="Home"><img src="assets/img/bootstrap-img/home.png"></a>
-		</li>
-		<li class="nav-item">
-		  <a class="nav-link" href="#">Portfólio</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-logo" href="#" alt="Logo"><img src="assets/img/my-logo.png" class="logo"></a>
-		  </li>
-		<li class="nav-item">
-		  <a class="nav-link" href="#">Sobre</a>
-		</li>
-		<li class="nav-item">
-		  <a class="nav-link" href="#" alt="Doar" onClick=""><img src="assets/img/bootstrap-img/pay.png"></a>
-		</li>
-	  </ul>
+		<!-- NavBar (MENU) -->
+		<ul class="nav nav-pills nav-fill">
+			<li class="nav-item">
+			<a class="nav-link" href="index.html" alt="Home"><img src="assets/img/bootstrap-img/home.png"></a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" href="sobre.html#contato">Contato</a>
+			</li>
+			<li class="nav-item">		  
+			<a class="nav-logo" href="#" alt="Logo" data-toggle="modal" data-target="#modal-copy"><img src="assets/img/my-logo.png" class="logo"></a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" href="sobre.html">Sobre</a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" href="#" alt="Doar" onClick=""><img src="assets/img/bootstrap-img/pay.png"></a>
+			</li>
+		</ul>
 
-	  <hr />
+		<hr />
 
-	  <!-- //navbar//-->
+		<!-- //navbar//-->
 
-	<div class="imgs">
+		<div class="imgs">
+			<img src="assets/img/code1.jpg" class="img-index1" alt="...">
+
+			<div class="title-company"> 
+				<b>We are a company</b>
+			</div>
+			<div class="text-company"> 
+				Specialized in <i>fullstack software</i> with quality and tradition. <br> 
+				<p style="margin-left: 115px"><i>The solution for your business is here. </i>🔎</p>
+				<br>
+			</div>
+		</div>
+
+		<hr />
+
+		<!-- Mensagens com efeito -->
+		<div id="mensagens-efect">
+			<div id="mensagem-inicio"></div>
+			<div id="mensagem-inicio-quer"></div>
+		</div>
+
+		<!-- //Mensagens com efeito -->
+
+		<hr />
+
+		<!-- Tecnologias -->
+
+		<div class="card-columns">
+			<div class="card">
+				<img src="assets/img/react-js.png" class="card-img-top" alt="...">
+				<div class="card-body">
+				<h5 class="card-title"> <b> <a href="https://pt-br.reactjs.org/docs/getting-started.html" target="_blank" style="color: rgb(255, 255, 255);">REACT JS </b></a></h5>
+				<p class="card-text">O <a href="https://pt-br.reactjs.org/docs/getting-started.html" target="_blank" style="color: rgb(255, 255, 255);">React</a> é a biblioteca mais popular do JavaScript e é usada para construir uma interface de usuário (IU). Ela oferece uma resposta excelente para o usuário adicionar comandos usando um novo método de renderizar sites.</p>
+				<p class="card-text"><small class="text-muted">Frame Work para FrontEnd</small></p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="assets/img/mongo-db.png" class="card-img-top" alt="...">
+				<div class="card-body">
+				<h5 class="card-title"><b> <a href="https://docs.mongodb.com/" target="_blank" style="color: rgb(255, 255, 255);">MONGO DB </b></a></h5>
+				<p class="card-text"><b> <a href="https://docs.mongodb.com/" target="_blank" style="color: rgb(255, 255, 255);">Mongo DB</b></a> é um banco de dados orientado a documentos que armazena dados em documentos JSON com esquema dinâmico. Isso significa que você pode armazenar seus registros sem se preocupar com a estrutura de dados, como o número de campos ou tipos de campos para armazenar valores.</p>
+				<p class="card-text"><small class="text-muted">Banco de dados orientado a documentos (BackEnd)</small></p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="assets/img/angular-js.png" class="card-img-top" alt="...">
+				<div class="card-body">
+				<h5 class="card-title"> <b> <a href="https://docs.angularjs.org/" target="_blank" style="color: rgb(255, 255, 255);">ANGULAR JS </b> </a></h5>
+				<p class="card-text">O  <b> <a href="https://docs.angularjs.org/" target="_blank" style="color: rgb(255, 255, 255);">Angular JS </b> </a> é um framework open-source de desenvolvimento front-end que possibilita o desenvolvimento de aplicações web, com foco em simplificar tanto a codificação quanto o processo de teste. Além disso, é possível integrá-lo com bibliotecas famosas como o Bootstrap, D3.</p>
+				<p class="card-text"><small class="text-muted">Frame Work para FrontEnd</small></p>
+				</div>
+			</div>
+			<div class="card bg-primary text-white text-center p-3">
+				<blockquote class="blockquote mb-0">
+				<p>ALGUMAS DE NOSSAS TECNOLOGIAS </p>
+				<footer class="blockquote-footer text-white">
+					<small>
+					Nossas tecnologias de ponta utilizadas em nossos projetos.
+					</small>
+				</footer>
+				</blockquote>
+			</div>
+			<div class="card text-center">
+				<img src="assets/img/pacote-padrao.png" class="card-img-top" alt="...">
+				<div class="card-body">
+				<h5 class="card-title"><b>HTML5, CSS3 and JS</b></h5>
+				<p class="card-text">Esse grande tríade da Web ainda é necessário para todos(as) e fundamental para desenvolvimento de aplicações para Web. Elas funcionam da seguinte forma: O HTML é a base da programação (como se fosse o esqueleto o corpo) O CSS é o que dá estilo aos códigos (como se fosse a roupa que a pessoa utiliza) O Javascript é o que dá movimento e ação (como se fosse o espírito do corpo). Todos os pacotes que envolvem JS estão incluídos aqui.</p>
+				<p class="card-text"><small class="text-muted">Pacote FrontEnd: HTML, JS E CSS.</small></p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="assets/img/node-js.png" class="card-img-top" alt="...">
+				<div class="card-body">
+				<h5 class="card-title"><b> <a href="https://nodejs.org/en/docs/" target="_blank" style="color: rgb(255, 255, 255);">NODE JS</a> </b></h5>
+				<p class="card-text">O <b> <a href="https://nodejs.org/en/docs/" target="_blank" style="color: rgb(255, 255, 255);">Node JS</a> </b> pode ser definido como um ambiente de execução Javascript server-side. Isso significa que com o Node. js é possível criar aplicações Javascript para rodar como uma aplicação standalone em uma máquina, não dependendo de um browser para a execução, como estamos acostumados.</p>
+				<p class="card-text"><small class="text-muted">Ambiente de execução Javascript server-side. (BackEnd)</small></p>
+				</div>
+			</div>
+			<div class="card">
+				<img src="assets/img/sql-server.png" class="card-img-top" alt="...">
+				<div class="card-body">
+				<h5 class="card-title"><b> <a href="https://docs.microsoft.com/pt-br/sql/sql-server/?view=sql-server-ver15" target="_blank" style="color: rgb(255, 255, 255);">SQL SERVER</a> </b></h5>
+				<p class="card-text">O Microsoft <b> <a href="https://docs.microsoft.com/pt-br/sql/sql-server/?view=sql-server-ver15" target="_blank" style="color: rgb(255, 255, 255);">SQL Server</a> </b> é um sistema gerenciador de Banco de dados relacional (SGBD) desenvolvido pela Sybase em parceria com a Microsoft. Esta parceria durou até 1994, com o lançamento da versão para Windows NT e desde então a Microsoft mantém a manutenção do produto.</p>
+				<p class="card-text"><small class="text-muted">Banco de dados relacional (BackEnd)</small></p>
+				</div>
+			</div>
+		</div>
 		
-		<img class="img-index1" src="assets/img/index-1.jpg">
-		<div class="title-company"> 
-			We are a company
-		</div>
-		<div class="text-company"> 
-			Specialized in: fullstack software with quality and tradition. <br> Proven and approved by our customers!
-			<br>
-		</div>
-	</div>
 
-	<hr />
+	<!-- //Tecnologias -->
 
-	<!-- Mensagens com efeito -->
-	<div id="mensagens-efect">
-		<div id="mensagem-inicio"></div>
-		<div id="mensagem-inicio-quer"></div>
-	</div>
+		<hr />	  
 
-	<!-- //Mensagens com efeito -->
+	<!-- Modal Copyright -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable">
+			<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Copyright</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				MIT License <br><br>
 
-	<hr />
+				Copyright (c) 2020 Alison Christian P. A. de Carvalho <br><br>
 
-	<!-- Tecnologias -->
+				Permission is hereby granted, free of charge, to any person obtaining a copy <br>
+				of this software and associated documentation files (the "Software"), to deal<br>
+				in the Software without restriction, including without limitation the rights<br>
+				to use, copy, modify, merge, publish, distribute, sublicense, and/or sell<br>
+				copies of the Software, and to permit persons to whom the Software is<br>
+				furnished to do so, subject to the following conditions:<br><br>
 
-	<div class="card-columns">
-		<div class="card">
-			<img src="assets/img/react-js.png" class="card-img-top" alt="...">
-			<div class="card-body">
-			<h5 class="card-title"> <b> <a href="https://pt-br.reactjs.org/docs/getting-started.html" style="color: rgb(255, 255, 255);">REACT JS </b></a></h5>
-			<p class="card-text">O <a href="https://pt-br.reactjs.org/docs/getting-started.html" style="color: rgb(255, 255, 255);">React</a> é a biblioteca mais popular do JavaScript e é usada para construir uma interface de usuário (IU). Ela oferece uma resposta excelente para o usuário adicionar comandos usando um novo método de renderizar sites.</p>
-			<p class="card-text"><small class="text-muted">Frame Work para FrontEnd</small></p>
+				The above copyright notice and this permission notice shall be included in all<br>
+				copies or substantial portions of the Software.<br><br>
+
+				THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<br>
+				IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<br>
+				FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<br>
+				AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER<br>
+				LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,<br>
+				OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE<br>
+				SOFTWARE.
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+				<a href="https://github.com/AlisonChs/Site-BootStrap/blame/main/LICENSE" target="_blank"><button type="button" class="btn btn-primary">Ver versão completa</button></a>
+			</div>
 			</div>
 		</div>
-		<div class="card">
-			<img src="assets/img/mongo-db.png" class="card-img-top" alt="...">
-			<div class="card-body">
-			<h5 class="card-title"><b> <a href="https://docs.mongodb.com/" style="color: rgb(255, 255, 255);">MONGO DB </b></a></h5>
-			<p class="card-text"><b> <a href="https://docs.mongodb.com/" style="color: rgb(255, 255, 255);">Mongo DB</b></a> é um banco de dados orientado a documentos que armazena dados em documentos JSON com esquema dinâmico. Isso significa que você pode armazenar seus registros sem se preocupar com a estrutura de dados, como o número de campos ou tipos de campos para armazenar valores.</p>
-			<p class="card-text"><small class="text-muted">Banco de dados orientado a documentos (BackEnd)</small></p>
+		</div>
+
+	<!-- Modal inicial-logo-->
+	<div class="modal fade" id="modal-copy" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">Olá!</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			</div>
+			<div class="modal-body">
+			Este projeto de website é um trabalho escolar para a ETEC CT. Para saber mais sobre
+			mim, clique no botão "sobre" e leia! Tem sugestões? Envie-me abaixo!
+
+			<br><br><br>
+			<form>
+				<div class="form-group">
+				<label for="recipient-name" class="col-form-label">Seu e-mail/nome:</label>
+				<input type="text" class="form-control" id="recipient-name">
+				</div>
+				<div class="form-group">
+				<label for="message-text" class="col-form-label">Sugestão:</label>
+				<textarea class="form-control" id="message-text"></textarea>
+				</div>
+			</form>
+
+			<small class="text-muted">Para abrir novamente este modal, reinicialize a página ou clique na Logo.</small>
+			</div>
+			<div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+			<button type="button"  id="botaoS" class="btn btn-primary" onclick="mudarBotao()">Enviar sugestão</button>
 			</div>
 		</div>
-		<div class="card">
-			<img src="assets/img/angular-js.png" class="card-img-top" alt="...">
-			<div class="card-body">
-			<h5 class="card-title"> <b> <a href="https://docs.angularjs.org/" style="color: rgb(255, 255, 255);">ANGULAR JS </b> </a></h5>
-			<p class="card-text">O  <b> <a href="https://docs.angularjs.org/" style="color: rgb(255, 255, 255);">Angular JS </b> </a> é um framework open-source de desenvolvimento front-end que possibilita o desenvolvimento de aplicações web, com foco em simplificar tanto a codificação quanto o processo de teste. Além disso, é possível integrá-lo com bibliotecas famosas como o Bootstrap, D3.</p>
-			<p class="card-text"><small class="text-muted">Frame Work para FrontEnd</small></p>
-			</div>
-		</div>
-		<div class="card bg-primary text-white text-center p-3">
-			<blockquote class="blockquote mb-0">
-			<p>ALGUMAS DE NOSSAS TECNOLOGIAS </p>
-			<footer class="blockquote-footer text-white">
-				<small>
-				Nossas tecnologias de ponta utilizadas em nossos projetos.
-				</small>
-			</footer>
-			</blockquote>
-		</div>
-		<div class="card text-center">
-			<img src="assets/img/pacote-padrao.png" class="card-img-top" alt="...">
-			<div class="card-body">
-			<h5 class="card-title"><b>HTML5, CSS3 and JS</b></h5>
-			<p class="card-text">Esse grande tríade da Web ainda é necessário para todos(as) e fundamental para desenvolvimento de aplicações para Web. Elas funcionam da seguinte forma: O HTML é a base da programação (como se fosse o esqueleto o corpo) O CSS é o que dá estilo aos códigos (como se fosse a roupa que a pessoa utiliza) O Javascript é o que dá movimento e ação (como se fosse o espírito do corpo). Todos os pacotes que envolvem JS estão incluídos aqui.</p>
-			<p class="card-text"><small class="text-muted">Pacote FrontEnd: HTML, JS E CSS.</small></p>
-			</div>
-		</div>
-		<div class="card">
-			<img src="assets/img/node-js.png" class="card-img-top" alt="...">
-			<div class="card-body">
-			<h5 class="card-title"><b> <a href="https://nodejs.org/en/docs/" style="color: rgb(255, 255, 255);">NODE JS</a> </b></h5>
-			<p class="card-text">O <b> <a href="https://nodejs.org/en/docs/" style="color: rgb(255, 255, 255);">Node JS</a> </b> pode ser definido como um ambiente de execução Javascript server-side. Isso significa que com o Node. js é possível criar aplicações Javascript para rodar como uma aplicação standalone em uma máquina, não dependendo de um browser para a execução, como estamos acostumados.</p>
-			<p class="card-text"><small class="text-muted">Ambiente de execução Javascript server-side. (BackEnd)</small></p>
-			</div>
-		</div>
-		<div class="card">
-			<img src="assets/img/sql-server.png" class="card-img-top" alt="...">
-			<div class="card-body">
-			<h5 class="card-title"><b> <a href="https://docs.microsoft.com/pt-br/sql/sql-server/?view=sql-server-ver15" style="color: rgb(255, 255, 255);">SQL SERVER</a> </b></h5>
-			<p class="card-text">O Microsoft <b> <a href="https://docs.microsoft.com/pt-br/sql/sql-server/?view=sql-server-ver15" style="color: rgb(255, 255, 255);">SQL Server</a> </b> é um sistema gerenciador de Banco de dados relacional (SGBD) desenvolvido pela Sybase em parceria com a Microsoft. Esta parceria durou até 1994, com o lançamento da versão para Windows NT e desde então a Microsoft mantém a manutenção do produto.</p>
-			<p class="card-text"><small class="text-muted">Banco de dados relacional (BackEnd)</small></p>
-			</div>
 		</div>
 	</div>
 	
+		<script type="text/javascript">
+			function mudarBotao() {
+				document.getElementById('botaoS').setAttribute('class', 'botao-sucesso');
+				document.getElementById('botaoS').innerHTML = "Obrigado!"
+			}
+		</script>
 
-<!-- //Tecnologias -->
 
-	<hr />
+	<!-- Rodapé-->
 
+		<div id="rodape">
 
-<!-- Rodapé-->
+			<div class="copy-text">
 
-	<div id="rodape">
+				<a href="#" target="_blank" data-toggle="modal" data-target="#exampleModal" class="copy-mit">Alison Ch.'s © 2020 </a>| Trabalho para a <a href="http://www.etecct.com.br/" target="_blank" class="etecct-link"> ETEC CT</a>.
 
-		<div class="copy-text">
-
-			<a href="https://github.com/AlisonChs/AlisonChs.github.io/blame/main/LICENSE" target="_blank" class="copy-mit">Alison Ch.'s © 2020 </a>| Trabalho para a <a href="http://www.etecct.com.br/" target="_blank" class="etecct-link"> ETEC CT</a>.
+			</div>
 
 		</div>
 
+	<!--//Rodapé-->
+
 	</div>
 
-<!--//Rodapé-->
+	<!--Texto Inicial Escondido-->
 
+	<div id="textoNaoCarregado">
+
+		<div class="title-card">
+			<h1>Olá!</h1>
+			<p>Este website ainda não foi terminado, mas está sendo feito utilizando dos componentes do bootstrap e de JS, para um trabalho escolar. <br>
+			Todas as imagens foram editadas/fotografadas pelo autor. Quando entrar, clique na logo para nos comunicarmos. <br>
+			Clique no botão para continuar!</p>
+		</div>
+
+		<div class="text-center">
+			<div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+			<span class="sr-only">Loading...</span>
+			</div>
+		</div> <br>
+
+		<a href="#" onclick="esc('contteiner'), esc('textoNaoCarregado')"><button class="btn btn-outline-light" style="margin-left: 46.9%;">Carregar</button></a>
+
+	</div>
+
+	<!-- Scripts para o uso do bootstrap -->
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
 

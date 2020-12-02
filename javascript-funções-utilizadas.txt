@@ -1,0 +1,49 @@
+Alison Christian P. A. de Carvalho
+ETEC Cidade Tiradentes
+1º B
+D.S 
+PWI
+  ______________________
+
+   Funções utilizadas:
+
+______________________________________________
+
+	1. Hide/Show a DIV
+
+Fiz esta função a partir de uma pergunta
+no website StackOverFlow.com, pois já havia
+visto outros websites utilizando da mesma e
+achei uma boa utilizar no meu projeto.
+Ela apenas consiste em esconder uma DIV a
+partir de um evento, e a partir do mesmo evento,
+ela pode mostrar novamente a mesma DIV.
+
+______________________________________________
+
+   2. Efeito de máquina de escrever
+
+Esta função foi retirada de vários fóruns e
+adaptada para o meu código. Novamente, também
+já havia visto em outros websites, e quis usar
+no meu projeto. Esta função consiste em fazer
+com que o texto seja digitado automaticamente,
+na tela, com um efeito de transição incrível.
+Outra função do mesmo "gênero", é a que faz com
+que apareça o "|", para que pareça que realmente
+está sendo digitado, que eu adaptei também de
+outros fóruns em um mesmo website.
+
+______________________________________________
+
+	3. SetAtributte()
+
+Esta função, eu já conhecia antes de entrarmos
+no assunto de CSS pela ETEC. 
+Ela consiste basicamente em mudar um atributo
+qualquer a partir de um evento, como mudar o nome
+da classe de um botão após ele ser clicado, etc.
+
+______________________________________________
+
+	

@@ -52,6 +52,14 @@
     font-family: 'Raleway', sans-serif;
 }
 
+.card-link {
+    color: white;
+}
+
+.card-link:hover {
+    color: black;
+}
+
 .p-3:hover {
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -61,4 +69,39 @@
     margin-top: 5%;
     margin-bottom: 10%;
 }
+
+.carousel-item {
+    position: relative;
+    left: 20%;
+}
+
+.d-block {
+    height: 500px;
+    width: 800px!important;
+    opacity: 0.1;
+}
+
+.inspiracoes-cards .col .card .card-img-top {
+    margin-left: 40%;
+    width: 100px!important;
+    height: auto!important;
+    border-radius: 500px!important;
+}
+
+.cards-contato .col .card .card-img-top {
+    width: 90px!important;
+    height: auto!important;
+    border-radius: 500px!important;
+}
+
+.modal-body, .modal-title {
+    color: black;
+}
+
+.card-sobre .card-text {
+    margin-top: 20%
+}
+
+
+
 
