@@ -12,9 +12,8 @@ if (!$conn) {
  
 echo "Connected successfully";
 
-
+$sql = "INSERT INTO comms (nomePessoa, emailPessoa, sugestao) VALUES ('Test', 'Testing@tesing.com', 'Testing')";
  
-// $sql = "INSERT INTO Students (name, lastname, email) VALUES ('Test', 'Testing', 'Testing@tesing.com')";
 if (mysqli_query($conn, $sql)) {
       echo "New record created successfully";
 } else {
