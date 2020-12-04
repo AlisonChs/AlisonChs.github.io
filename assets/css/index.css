@@ -5,8 +5,8 @@ body, html {
 }
 
 .logo {
-    height: 100px;
-    margin-top: 5%;
+    height: 120px;
+    margin-top: 2%;
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
@@ -58,46 +58,8 @@ a:hover {
        }
    }
 
-.imgs {
-    width: 100%;
-    opacity: 1;
-    height: 600px;
-    position: relative;
-
-}
-
-.img-index1 {
-    width: 35%;
-    margin-left: 2%;
-    margin-top: 11%;
-    position: absolute;
-    border-radius: 10px;
-}
-
 #mensagens-efect {
     height: 400px;
-}
-
-.title-company {
-    color: #40E0D0;
-    font-size: 40px;
-    font-family:'Raleway', sans-serif; 
-    padding-left: 60%;
-    padding-top: 20%;
-    position: relative;
-    margin-left: 5px;
-    opacity: 1;
-    animation: pisca 4s infinite;
-    text-transform: uppercase;
-}
-
-.text-company {
-    position: relative;
-    font-size: 20px;
-    padding-top: 10px;
-    padding-left: 55%;
-    color: rgb(169, 170, 169);
-    font-family: 'Raleway', sans-serif;
 }
 
 #rodape {
@@ -107,17 +69,18 @@ a:hover {
     color: #6c757d;
     position: relative;
     margin-top: 10%;
+    font-family:"Space Mono",monospace;
 }
 
 .copy-text {
     position: absolute;
     text-align: center;
     bottom: 50%;
-    left: 38%;
+    left: 35%;
 }
 
 .copy-text a {
-    color: #6c757d;
+    color: whitesmoke;
 }
 
 .copy-text a:hover {
@@ -141,6 +104,10 @@ a:hover {
 .card-sobre .card:hover, .title-card:hover {
     -webkit-transform: scale(1);
     transform: scale(1);
+}
+
+.card-title {
+    font-family:"Space Mono",monospace;
 }
 
 .title-card {
@@ -226,10 +193,293 @@ a:hover {
     100% { opacity: 1; }
     }
 
+.btn-modals {
+    margin-top: 2%;
+    color: white;
+    border-color: transparent;
+    border-radius: 5px;
+    width: 90%;
+    height: 40px;
+    margin-left: 5%;
+    font-size: medium;
+    background-color: #1C1C1C;
+}
+
+.botaoS-sucesso {
+    background-color: green;
+    margin-top: 2%;
+    color: white;
+    border-color: transparent;
+    border-radius: 5px;
+    width: 90%;
+    height: 40px;
+    margin-left: 5%;
+    font-size: medium;
+}
+
+.botaoS-sucesso:active, .botaoS-sucesso:focus, .quantia-donate:active, .texto-donate:active, .quantia-donate:focus, .texto-donate:focus, .quantia-donate, .texto-donate, button{
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+.btn-modals:hover {
+    border-color: transparent;
+    color: black;
+    background-color: whitesmoke;
+}
 
 
+.object {
+    animation:MoveUpDown 1s linear infinite;
+    position:absolute;
+    right:0;
+    top:0;
+    z-index:4;
+    max-width:550px;
+    width:100%
+}
+    
+@keyframes MoveUpDown{0%,100%{top:0}50%{top:10px}}
 
+#apresentacaoPortfolio {
+    font-family:"Space Mono",monospace;
+    color: white;
+    top: 0;
+    position: absolute;
+}   
 
+#apresentacaoPortfolio #apresentacaoTexto h2{
+    font-size:18px;
+    font-weight:400;
+}
 
+#apresentacaoPortfolio #apresentacaoTexto h2 #nome{
+    text-transform:uppercase;
+    font-size:2.5rem;
+    font-weight:900
+}
 
+#apresentacaoPortfolio #apresentacaoFoto{
+    width:40%;
+    height:100vh
+}
 
+@media screen and (max-width: 1000px){
+    #apresentacaoPortfolio #apresentacaoFoto{display:none}
+}
+
+#apresentacaoPortfolio #apresentacaoFoto #fundo{
+    width:100%;
+    max-width:950px;
+    right:0;
+    top: 0;
+}
+
+@media screen and (max-width: 1000px){
+    #apresentacaoPortfolio #apresentacaoFoto #fundo{display:none}
+}
+
+@media screen and (max-width: 1000px){
+    #apresentacaoPortfolio #apresentacaoFoto #fundo{display:none}
+}
+
+body.dark #apresentacaoPortfolio #apresentacaoTexto h2{color:#f8f8f8}
+
+body.dark #sobre,body.dark #servicos{
+    background-color:#232323;
+    color:#f8f8f8
+}
+
+body.dark #projetos h2{color:#f8f8f8}
+
+body.dark #projetos div{background-color:#232323;box-shadow:none}
+
+body.dark #projetos div h3,body.dark #projetos div p{color:#f8f8f8}
+
+body.dark #servicos div{background-color:#191919;box-shadow:none}
+
+body.dark #servicos h2,body.dark #servicos div p{color:#f8f8f8}
+
+#apresentacaoPortfolio{display:flex;align-items:center;height:100vh;overflow:hidden; margin-bottom: 60%;}
+
+@media screen and (max-width: 1000px){
+    #apresentacaoPortfolio{padding:75px}
+}
+
+#apresentacaoPortfolio #apresentacaoTexto{padding:150px;width:60%;flex-direction:column}
+
+@media screen and (max-width: 1000px){
+    #apresentacaoPortfolio #apresentacaoTexto{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+        text-align:center;
+        padding:0px
+    }
+}
+
+#apresentacaoPortfolio #apresentacaoTexto h2{
+    font-size:18px;
+    font-weight:400;
+}
+    
+#apresentacaoPortfolio #apresentacaoTexto h2 #nome{text-transform:uppercase;font-size:2.5rem;font-weight:900}
+
+#apresentacaoPortfolio #apresentacaoTexto h2 #profissao{font-size:1.06rem;text-transform:uppercase}
+
+#apresentacaoPortfolio #apresentacaoTexto a{background-color:#4070f4;color:#fff;padding:15px;width:200px;display:flex;align-self:center;align-items:center;justify-content:center;border-radius:10px;border:none;margin-top:30px;font-size:16px;font-weight:700;font-family:"Space Mono",monospace}#apresentacaoPortfolio #apresentacaoTexto a:hover{cursor:pointer;background-color:#3460da}#apresentacaoPortfolio #apresentacaoTexto .midiasSociais{width:150px;display:flex;justify-content:space-between;margin-top:75px;color:#0e2431}#apresentacaoPortfolio #apresentacaoTexto .midiasSociais i{font-size:24px}#apresentacaoPortfolio #apresentacaoTexto .midiasSociais i:hover{cursor:pointer;color:#091a24}@media screen and (max-width: 1000px){#apresentacaoPortfolio #apresentacaoTexto .midiasSociais{padding:40px 0px;margin:0 auto}}#apresentacaoPortfolio #apresentacaoFoto{width:40%;position:relative;height:100vh}@media screen and (max-width: 1000px){#apresentacaoPortfolio #apresentacaoFoto{display:none}}#apresentacaoPortfolio #apresentacaoFoto #fundo{width:100%;max-width:950px;right:0}
+
+@media screen and (max-width: 1000px){#apresentacaoPortfolio #apresentacaoFoto #fundo{display:none}}
+
+body.dark #apresentacaoPortfolio #apresentacaoTexto h2{color:#f8f8f8}
+
+#servicos{color:#f8f8f8;margin-top: 30%; margin-bottom: 30%;}
+
+#servicos div{
+    background-color:#191919;
+    box-shadow:none;
+}
+
+#servicos .title-card {
+    border: 0 transparent;
+    background-color: #1C1C1C;
+    box-shadow: none;
+}
+
+#servicos h2,body.dark #servicos div p{color:#f8f8f8}
+
+#servicos h2 {
+    text-align:center;
+    margin-top:20px;
+    color:white;
+    font-size:30px;
+    font-family: 'Raleway', sans-serif;
+} 
+
+#servicos article{
+    display:flex;
+    height:auto;
+    flex-wrap:wrap;
+    margin-top:20px;
+    font-family:"Space Mono",monospace;
+    color: rgb(169, 170, 169);
+
+} 
+
+#servicos div{
+    text-align:center;
+    height:auto;
+    background-color: #1C1C1C;
+    padding:30px;
+    border-radius:15px;
+    margin:10px;
+    flex-basis:250px;
+    flex-grow:1;
+    box-shadow:0px 0px 20px black;
+} 
+
+#servicos div h2{
+    font-size:20px;
+    padding:20px 0px
+} 
+
+#servicos div p{
+    line-height:30px
+}
+
+@media screen and (max-width: 800px){ 
+    #servicos{padding:70px 10px}
+} 
+
+.imageIcone{width:50px} 
+.imageIcones{width:100px}
+
+#projetos h2{color:#f8f8f8}
+
+#projetos div{background-color:transparent;box-shadow:none}
+
+#projetos div h3,body.dark #projetos div p{color:#f8f8f8}
+
+#projetos{
+    padding:70px;
+    text-align:center;
+    margin-top: 30%;
+}
+
+#projetos #linkRepo{
+    color:white;
+    font-size:18px
+}
+
+#projetos h2{
+    text-align:center;
+    margin-top:20px;
+    color: whitesmoke;
+    font-size:30px;
+}
+
+#projetos article{
+    padding:25px 0px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    text-align:left
+}
+
+#projetos article div{
+    height:auto;
+    flex-grow:1;
+    flex-basis:300px;
+    background-color: #1C1C1C;
+    padding:40px 40px 80px 40px;
+    margin:10px;
+    border-radius:5px;
+    box-shadow:0px 0px 10px black;
+    position:relative;
+}
+
+#projetos article div h3{font-size:1.2rem}
+
+#projetos article div p{margin:20px 0px;font-size:0.9rem}
+
+#projetos article div .botoes-projetos{position:absolute;bottom:40px;left:40px}
+
+#projetos article div a{margin-right:10px}
+
+#projetos article div .github-button{
+    width:35px;
+    height:35px;
+    font-size:20px;
+    border-radius:50%;
+    background-color:#4070f4;
+    color:#fff;
+    border:0;
+    border-radius:50%;
+    cursor:pointer
+}
+
+#projetos img {
+    margin-bottom: 4%;
+}
+
+#projetos article div .github-button:hover{cursor:pointer;background-color:#3460da}
+
+@media screen and (max-width: 800px){#projetos{padding:70px 10px}}
+
+.botoes-projetos{position: absolute;}
+
+.aovivo-button{
+    background-color:#4070f4;
+    color:#fff;
+    padding: 10px 20px;
+    border:0;
+    font-weight:500;
+    font-size:14px;
+    border-radius:5px;
+    text-transform:uppercase;
+    cursor:pointer;
+}
+
+#projetos article div .aovivo-button:hover{cursor:pointer;background-color:#3460da}

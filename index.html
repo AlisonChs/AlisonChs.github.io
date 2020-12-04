@@ -9,84 +9,131 @@
 	<!-- link para os outros arquivos CSS -->
 	<link href="assets/css/main.css" rel="stylesheet">
 
-	<!-- Efeito da mensagem automática -->
-	<script type="text/javascript">
-		
-		var posicao = 0;
-		var mensagem = "< O futuro é agora.     <br>Você precisa de inovação.       <br>Você precisa de controle.>      <br><a href='#'>Contribua</a> ou faça um orçamento. <br></>                 ";  // Digite entre as aspas o que você quiser, inclusive tags HTML.
-  
-		function efeito() {
-		  document.getElementById("mensagem-inicio").innerHTML = mensagem.substring(posicao,mensagem,length);
-		  posicao++;
-		  if (posicao == mensagem.length) {
-	posicao = 0;
-		  }
-		  setTimeout("efeito()", 130);
-		}
-
-	</script>
-
-	<!-- Escondendo o body com o atributo "display" -->
-	<script type="text/javascript">
-
-		function esc(el) {
-        var display = document.getElementById(el).style.display;
-        if(display == "none")
-            document.getElementById(el).style.display = 'block';
-        else
-            document.getElementById(el).style.display = 'none';
-    }
-	</script>
-
 	<meta charset="UTF-8">
 
-	<!-- Fonte da mensagem automática e afins -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&family=Raleway:wght@200&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+
+	<link rel="shortcut icon" href="assets/img/logo2.png" style="width: 100%;" >
 
 </head>
 
-<body onload="efeito(), esc('contteiner')">
+<body onload="efeito(), esc('contteiner'), esc('paypal-button-container')">
 
 	<div id="contteiner">
 
-		<!-- NavBar (MENU) -->
-		<ul class="nav nav-pills nav-fill">
-			<li class="nav-item">
-			<a class="nav-link" href="index.html" alt="Home"><img src="assets/img/bootstrap-img/home.png"></a>
-			</li>
-			<li class="nav-item">
-			<a class="nav-link" href="sobre.html#contato">Contato</a>
-			</li>
-			<li class="nav-item">		  
-			<a class="nav-logo" href="#" alt="Logo" data-toggle="modal" data-target="#modal-copy"><img src="assets/img/my-logo.png" class="logo"></a>
-			</li>
-			<li class="nav-item">
-			<a class="nav-link" href="sobre.html">Sobre</a>
-			</li>
-			<li class="nav-item">
-			<a class="nav-link" href="#" alt="Doar" onClick=""><img src="assets/img/bootstrap-img/pay.png"></a>
-			</li>
-		</ul>
+		<div class="index-page1">
 
-		<hr />
+			<!-- NavBar (MENU) -->
+			<nav class="nav nav-pills nav-fill fixed-top">
+				<li class="nav-item">
+				<a class="nav-link" href="index.html" alt="Home"><img src="assets/img/bootstrap-img/home.png"></a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link" href="sobre.html#contato">Contato</a>
+				</li>
+				<li class="nav-item">		  
+				<a class="nav-logo" href="#" alt="Logo" data-toggle="modal" data-target="#modal-logo"><img src="assets/img/logo2.png" class="logo"></a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link" href="sobre.html">Sobre</a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link" href="#" alt="Doar" data-toggle="modal" data-target="#modal-donate"><img src="assets/img/bootstrap-img/pay.png" style="margin-top: 50%;"></a>
+				<small class="text-muted" style="position: absolute; top: 41%;">Doar</small></p>
+				</li>
+			</nav>
 
-		<!-- //navbar//-->
+			<hr />
 
-		<div class="imgs">
-			<img src="assets/img/code1.jpg" class="img-index1" alt="...">
+			<!-- //navbar//-->
 
-			<div class="title-company"> 
-				<b>We are a company</b>
-			</div>
-			<div class="text-company"> 
-				Specialized in <i>fullstack software</i> with quality and tradition. <br> 
-				<p style="margin-left: 115px"><i>The solution for your business is here. </i>🔎</p>
-				<br>
-			</div>
+			<!--Apresentação Portfólio-->
+			<section id="apresentacaoPortfolio" class="index-page1">
+				<article id="apresentacaoTexto">
+				<h2>
+					Olá, eu sou o<br>
+					<span id="nome">Alison Christian.</span><br>
+					<span>Desenvolvedor FullStack e designer.</span>
+				</h2>
+				<a href="sobre.html">
+					<i style="font-size: 22px" class="fa fa-github"></i>Leia sobre mim
+				</a>
+				</article>
+		
+				<article id="apresentacaoFoto">
+				<img src="assets/img/tst/fundoEspaco.png" alt="Imagem de um espaço com coisas flutando" id="fundo">
+				<img src="assets/img/tst/fundoPessoa.png"
+					alt="Imagem de ilustrativa de mim flutuando no espaço com um efeito de movimento" class="object">
+				</article>
+			</section>
 		</div>
+
+
+		<hr style="margin-top: 60%;"/>
+
+		   <!--Serviços-->
+		   <section id="servicos">
+			<div class="title-card">
+				<h1>Serviços</h1>
+			</div>
+			<article>
+			  <div>
+				<img src="assets/img/tst/criacao-de-sites.png" alt="Uma logo de uma pasta com arquivos de códigos"
+				  class="imageIcone">
+				<h2>Criação de Sites</h2>
+				<p>Desenvolvimento de sites profissionais, sistemas web, blogs e lojas virtuais focado em
+				  resultados</p>
+			  </div>
+	  
+			  <div>
+				<img src="assets/img/tst/responsivo.png" alt="Uma logo de um notebook e um celular" class="imageIcone">
+				<h2>Sites responsivos</h2>
+				<p>Criação de sites responsivos para a melhor visualização em dispositivos móveis com
+				  qualidade em todas as telas</p>
+			  </div>
+	  
+			  <div>
+				<img src="assets/img/tst/layouts.png" alt="Uma logo de uma criação de layouts" class="imageIcone">
+				<h2>Layouts</h2>
+				<p>Desenho de layouts que se adequam ao seu negócio de forma profissional e fiel no desenvolvimento</p>
+			  </div>
+	  
+			  <div>
+				<img src="assets/img/tst/seo.png" alt="Uma logo de um gráfico" class="imageIcone">
+				<h2>SEO e Analytics</h2>
+				<p>Estratégia e monitoração para seu negócio, fazendo com que seu site apareça cada vez melhor nas
+				  buscas</p>
+			  </div>
+	  
+			  <div>
+				<img src="assets/img/tst/marketing.png" alt="Uma logo de uma carta aberta com um auto falante saindo dele"
+				  class="imageIcone">
+				<h2>E-mail Marketing</h2>
+				<p>Criação e ativação de campanhas por e-mail, gerando leads e capacitando para um
+				  melhor desempenho</p>
+			  </div>
+	  
+			  <div>
+				<img src="assets/img/tst/tecnologias.png" alt="Uma logo de um notebook" class="imageIcone">
+				<h2>Tecnologias</h2>
+				<p>Desenvolvimento através das melhores linguagens e tecnologias disponíveis na criação do seu projeto</p>
+			  </div>
+	  
+			  <div>
+				<img src="assets/img/tst/design-grafico.png" alt="Uma logo de monitor com materiais na tela" class="imageIcone">
+				<h2>Design Gráfico</h2>
+				<p>Realização da comunicação visual impressa do seu projeto ou seu negócio</p>
+			  </div>
+	  
+			  <div>
+				<img src="assets/img/tst/redes-sociais.png" alt="Uma logo de um celular usando redes sociais"
+				  class="imageIcone">
+				<h2>Redes Sociais</h2>
+				<p>Não deixe sua empresa de fora das redes sociais, divulgue seu negócio e apareça para seu
+				  público-alvo</p>
+			  </div>
+			</article>
+		  </section>
 
 		<hr />
 
@@ -100,7 +147,84 @@
 
 		<hr />
 
+		<!--Projetos-->
+		<section id="projetos">
+			<div class="title-card">
+				<h1>Projetos</h1>
+			</div>
+			<article>
+				<div>
+					<h3>🚀 ReactJS: DevFlix</h3>
+					<p>O Devflix é uma aplicação web para o compartilhamento de vídeos sobre desenvolvimento e tecnologia em que é possível cadastrar novos vídeos e categorias.</p>
+					<img src="https://github.com/AlisonChs/Projeto-ReactJS-NetFlix/blob/master/github_assets/webgif.gif?raw=true" style="width: 100%;">
+					<span class="botoes-projetos">
+						<!--<a href="#" target="_blank">-->
+						  <button class="aovivo-button" data-toggle="modal" data-target="#modal404"><i class="fa fa-link"></i> website </button>
+						<!--</a>-->
+						<a href="https://github.com/AlisonChs/Projeto-ReactJS-NetFlix" target="_blank">
+						  <button class="aovivo-button"><i class="fa fa-github"></i> github </button>
+						</a>
+					  </span>
+				</div>
+	  
+			  <div>
+				<h3>♟️ Java: Sistema de xadrez</h3>
+				<p>Este sistema de xadrez é um projeto pessoal para fixar meus conhecimentos da POO de Java, onde deixo o código aberto para modificações. Consiste apenas em uma versão back-end de um sistema de xadrez <b> completo. </b></b></p>
+					<img src="https://pt.bloggif.com/output/2/b/2b1c387e8ac5ef825dd751cb4ea0a764.gif?1607083467" border="0" style="width: 100%; margin-left: "/>
+				<span class="botoes-projetos">
+					<!--<a href="#" target="_blank">-->
+						<button class="aovivo-button" data-toggle="modal" data-target="#modal404"><i class="fa fa-link"></i> versão visual </button>
+					<!--</a>-->
+					<a href="https://github.com/AlisonChs/Sistema-De-Xadrez-JAVA" target="_blank">
+						<button class="aovivo-button"><i class="fa fa-github"></i> github </button>
+					</a>
+				</span>
+				
+				</div>
+	  
+			  <div>
+				<h3>🧪 Site/Trabalho: Química</h3>
+				<p>Este foi um dos meus primeiros projetos dentro da ETEC, o objetivo era criar um website responsivo, em html e css extremamente básicos do tema "Química".</p>
+				<img src="https://pt.bloggif.com/output/9/7/97ca11089c635307cc7d1a5e26f9559d.gif?1607084142" style="width: 100%;"/>
+			
+				<span class="botoes-projetos">
+					<a href="http://etec199-2020-alisoncarvalho1.atwebpages.com/projeto_quimica/index.html" target="_blank">
+						<button class="aovivo-button"><i class="fa fa-link"></i> site </button>
+					</a>
+					<!--<a href="#" target="_blank">-->
+						<button class="aovivo-button" data-toggle="modal" data-target="#modal404"><i class="fa fa-github"></i> github </button>
+					<!--</a>-->
+				</span>
+			</div>
+	  
+			  <div>
+				<h3>Em breve!</h3>
+				<p>Site em construção.</p>
+			  </div>
+	  
+			  <div>
+				<h3>Em breve!</h3>
+				<p>Site em construção.</p>
+			  </div>
+	  
+			  <div>
+				<h3>Em breve!</h3>
+				<p>Site em construção.</p>
+			  </div>
+			</article>
+	  
+			<a href="https://github.com/alisonchs?tab=repositories" target="_blank" id="linkRepo">Repositórios no GitHub</a>
+		  </section>
+
+		<hr  style="margin-bottom: 30%;"/>
+
 		<!-- Tecnologias -->
+
+		<div class="title-card">
+
+			<h1> Tecnologias </h1>
+
+		</div>
 
 		<div class="card-columns">
 			<div class="card">
@@ -169,7 +293,7 @@
 		<hr />	  
 
 	<!-- Modal Copyright -->
-		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal fade" id="modal-copy" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-scrollable">
 			<div class="modal-content">
 			<div class="modal-header">
@@ -210,7 +334,7 @@
 		</div>
 
 	<!-- Modal inicial-logo-->
-	<div class="modal fade" id="modal-copy" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade" id="modal-logo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -220,7 +344,7 @@
 			</button>
 			</div>
 			<div class="modal-body">
-			Este projeto de website é um trabalho escolar para a ETEC CT. Para saber mais sobre
+			Este projeto de website era um trabalho escolar anteriormente, e agora foi um pouco modificado para ser meu portfólio. Para saber mais sobre
 			mim, clique no botão "sobre" e leia! Tem sugestões? Envie-me abaixo!
 
 			<br><br><br>
@@ -235,23 +359,84 @@
 				</div>
 			</form>
 
-			<small class="text-muted">Para abrir novamente este modal, reinicialize a página ou clique na Logo.</small>
-			</div>
+		</div>
 			<div class="modal-footer">
-			<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-			<button type="button"  id="botaoS" class="btn btn-primary" onclick="mudarBotao()">Enviar sugestão</button>
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+				<button type="button"  id="botaoS" class="btn btn-primary" onclick="mudarBotaoObg()">Enviar sugestão</button>
 			</div>
 		</div>
 		</div>
 	</div>
-	
-		<script type="text/javascript">
-			function mudarBotao() {
-				document.getElementById('botaoS').setAttribute('class', 'botao-sucesso');
-				document.getElementById('botaoS').innerHTML = "Obrigado!"
-			}
-		</script>
 
+	<!--Modal 404-->
+  <div class="modal fade" id="modal404" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalLabel">Ops</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  Desculpe! <br><br>
+		  O site ainda está em manuntenção, e por isso algumas funções ainda não estão finalizadas.<br><br>
+		  Envie-nos uma sugestão clicando na logo, ou faça um donate!
+
+		  <br><br><br> <small class="text-muted">A reforma não tem data prévia de conclusão, mas está sendo feita diariamente.</small>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+		  <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="mudarModal()" data-toggle="modal" data-target="#modal-donate">Doar</button>
+		  <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#modal-logo">Sugestões</button>
+
+		</div>
+	  </div>
+	</div>
+  </div>
+
+	<!-- Modal donate-->
+	<div class="modal fade" id="modal-donate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div id="modal-donate-js" class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">Doar</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			</div>
+			<div class="modal-body">
+					Meus projetos e contribuições são totalmente grátis, mas ainda assim
+					passo por muitas dificuldades financeiras. Caso queira, você pode
+					me ajudar doando pelo botão abaixo! <br><br> Para saber mais sobre
+					mim, clique no botão "sobre" e leia.<br> Tem sugestões ou quer dar um recado? Envie-me abaixo!
+					<br><br> Obs.: Você não precisa doar uma quantia para enviar uma sugestão.
+
+					<br><br><br>
+					<div id="smart-button-container">
+						<div style="text-align: center"><label for="description">Sugestão </label><br><textarea type="text" name="descriptionInput" class="texto-donate" id="description" placeholder="No que poderiamos melhorar, que sugestão tem para a gente?" maxlength="127" style="width: 75%;" value="" ></textarea></div>
+						<p id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter a description</p>
+						<div style="text-align: center"><label for="amount">Quantia </label><br><input name="amountInput" type="number" id="amount" class="quantia-donate" value="" placeholder="Quantia"><span> BRL</span></div>
+						<p id="priceLabelError" style="visibility: hidden; color:red; text-align: center;">Please enter a price</p>
+						<div id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value="" ></div>
+						<p id="invoiceidError" style="visibility: hidden; color:red; text-align: center;">Please enter an Invoice ID</p>
+						
+					</div>
+					<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=BRL" data-sdk-integration-source="button-factory"></script>
+					<script type="text/javascript" src="assets/js/paypal.js"></script>
+			</div>
+
+			
+			<button type="button"  id="botaoSG" class="btn-modals" onclick="mudarBotaoObg()">Enviar sugestão</button>
+			<button type="button"  id="botaoD" class="btn-modals" onclick="esc('paypal-button-container'), mudarBotaoDonate()">Doar</button>
+
+			<div style="text-align: center; margin-top: 0.625rem; max-width: 90%; margin-left: 5%;" id="paypal-button-container"></div>
+			<button type="button" class="btn-modals" data-dismiss="modal" style="margin-bottom: 5%; margin-top: 10%;">Fechar</button>
+		</div>
+		</div>
+	</div>
+	
+		
 
 	<!-- Rodapé-->
 
@@ -259,7 +444,7 @@
 
 			<div class="copy-text">
 
-				<a href="#" target="_blank" data-toggle="modal" data-target="#exampleModal" class="copy-mit">Alison Ch.'s © 2020 </a>| Trabalho para a <a href="http://www.etecct.com.br/" target="_blank" class="etecct-link"> ETEC CT</a>.
+				<a href="#" target="_blank" data-toggle="modal" data-target="#modal-copy" class="copy-mit">Alison Ch.'s © 2020 </a>| Estudante da <a href="http://www.etecct.com.br/" target="_blank" class="etecct-link"> ETEC CT</a>.
 
 			</div>
 
@@ -275,18 +460,17 @@
 
 		<div class="title-card">
 			<h1>Olá!</h1>
-			<p>Este website ainda não foi terminado, mas está sendo feito utilizando dos componentes do bootstrap e de JS, para um trabalho escolar. <br>
-			Todas as imagens foram editadas/fotografadas pelo autor. Quando entrar, clique na logo para nos comunicarmos. <br>
-			Clique no botão para continuar!</p>
+			<p>Este projeto de website era um trabalho escolar anteriormente, e agora está sendo <br> modificado para ser meu portfólio. Está sendo feito utilizando apenas de HTML, CSS, JS e BootStrap. <br> Clique no logotipo quando carregar o website!
+			<br><br>Clique no botão para continuar!</p>
 		</div>
 
 		<div class="text-center">
 			<div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
-			<span class="sr-only">Loading...</span>
+				<span class="sr-only">Loading...</span>
 			</div>
 		</div> <br>
 
-		<a href="#" onclick="esc('contteiner'), esc('textoNaoCarregado')"><button class="btn btn-outline-light" style="margin-left: 46.9%;">Carregar</button></a>
+		<a href="#" onclick="esc('contteiner'), esc('textoNaoCarregado')"><button class="btn btn-outline-light" style="margin-left: 42.5%;">Continuar com o website ↗</button></a>
 
 	</div>
 
@@ -294,7 +478,7 @@
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+	<script type="text/javascript" src="assets/js/index.js"></script>
 </body>
 
 </html>
