@@ -348,7 +348,7 @@
 			mim, clique no botão "sobre" e leia! Tem sugestões? Envie-me abaixo!
 
 			<br><br><br>
-			<form>
+			<form action="conexao.php" method="POST">
 				<div class="form-group">
 				<label for="recipient-name" class="col-form-label">Seu e-mail/nome:</label>
 				<input type="text" class="form-control" id="recipient-name">
@@ -357,12 +357,12 @@
 				<label for="message-text" class="col-form-label">Sugestão:</label>
 				<textarea class="form-control" id="message-text"></textarea>
 				</div>
-			</form>
 
 		</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-				<button type="button"  id="botaoS" class="btn btn-primary" onclick="mudarBotaoObg()">Enviar sugestão</button>
+				<button type="submit"  id="botaoS" class="btn btn-primary" onclick="mudarBotaoObg()">Enviar sugestão</button>
+			</form>
 			</div>
 		</div>
 		</div>
