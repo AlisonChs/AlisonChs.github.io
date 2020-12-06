@@ -429,8 +429,12 @@
 			
 			<button type="button"  id="botaoSG" class="btn-modals" onclick="mudarBotaoObg()">Enviar sugestão</button>
 			<button type="button"  id="botaoD" class="btn-modals" onclick="esc('paypal-button-container'), mudarBotaoDonate()">Doar</button>
-
-			<div style="text-align: center; margin-top: 0.625rem; max-width: 90%; margin-left: 5%;" id="paypal-button-container"></div>
+			
+			<div id="smart-button-container" style="max-width: 90%; margin-left: 5%;">
+				<div style="text-align: center;">
+				  <div id="paypal-button-container"></div>
+				</div>
+			  </div>
 			<button type="button" class="btn-modals" data-dismiss="modal" style="margin-bottom: 5%; margin-top: 10%;">Fechar</button>
 		</div>
 		</div>
