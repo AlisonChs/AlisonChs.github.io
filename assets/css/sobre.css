@@ -1,0 +1,88 @@
+.card-sobre {
+    margin-bottom: 25%;
+    margin-top: 10%;
+}
+
+.card-sobre .card {
+    margin-top: 8%;
+}
+
+.card-sobre .card:hover, .title-card:hover {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.card-title {
+    font-family:"Space Mono",monospace;
+}
+
+/* Temp */ 
+
+@media (max-width: 1000px) {
+    h1 {font-size: 25px;}
+    .card-sobre img {width: 80%;}
+    section {margin-bottom: 90%;}
+    #contato .card {margin-left: 17%;}
+    #rodape {width: 100%;}
+}
+
+@media (min-width: 1100px) {
+    .card-sobre {
+        margin-left: 32%;
+    }
+    #contato .card {
+        margin-left: 24%;
+    }
+    #contato .card:hover {
+        animation: rodarTudo 2s;
+    }
+}
+
+/* */
+
+.title-card {
+    text-align: center;
+    margin-top: 5%;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    border-color: transparent;
+    font-size: larger;
+}
+
+.title-card p, .inspiracoes-sobre p {
+    color: rgb(169, 170, 169);
+}
+
+.inspiracoes-cards {
+    margin-top: 10%;
+    margin-bottom: 20%;
+}
+
+.inspiracoes-cards .card {
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.cards-contato {
+    margin-bottom: 20%;
+    margin-top: 10%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cards-contato .card {
+    margin-bottom: 5%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cards-contato .card:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}

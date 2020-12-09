@@ -15,6 +15,8 @@
 
 	<link rel="shortcut icon" href="assets/img/logo2.png" style="width: 100%;" >
 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 
 <body onload="efeito(), esc('contteiner'), esc('paypal-button-container')">
@@ -38,7 +40,7 @@
 				<a class="nav-link" href="sobre.html">Sobre</a>
 				</li>
 				<li class="nav-item">
-				<a class="nav-link" href="#" alt="Doar" data-toggle="modal" data-target="#modal-donate"><img src="assets/img/bootstrap-img/pay.png" style="margin-top: 50%;"></a>
+				<a class="nav-link" href="#" alt="Doar" data-toggle="modal" data-target="#modal-donate"><img src="assets/img/bootstrap-img/pay.png" style="margin-top: 50%;" class="btn-donate"></a>
 				<small class="text-muted" style="position: absolute; top: 41%;">Doar</small></p>
 				</li>
 			</nav>
@@ -77,7 +79,7 @@
 				<h1>Serviços</h1>
 			</div>
 			<article>
-			  <div>
+			  <div class="servico">
 				<img src="assets/img/tst/criacao-de-sites.png" alt="Uma logo de uma pasta com arquivos de códigos"
 				  class="imageIcone">
 				<h2>Criação de Sites</h2>
@@ -85,27 +87,27 @@
 				  resultados</p>
 			  </div>
 	  
-			  <div>
+			  <div class="servico">
 				<img src="assets/img/tst/responsivo.png" alt="Uma logo de um notebook e um celular" class="imageIcone">
 				<h2>Sites responsivos</h2>
 				<p>Criação de sites responsivos para a melhor visualização em dispositivos móveis com
 				  qualidade em todas as telas</p>
 			  </div>
 	  
-			  <div>
+			  <div class="servico">
 				<img src="assets/img/tst/layouts.png" alt="Uma logo de uma criação de layouts" class="imageIcone">
 				<h2>Layouts</h2>
 				<p>Desenho de layouts que se adequam ao seu negócio de forma profissional e fiel no desenvolvimento</p>
 			  </div>
 	  
-			  <div>
+			  <div class="servico">
 				<img src="assets/img/tst/seo.png" alt="Uma logo de um gráfico" class="imageIcone">
 				<h2>SEO e Analytics</h2>
 				<p>Estratégia e monitoração para seu negócio, fazendo com que seu site apareça cada vez melhor nas
 				  buscas</p>
 			  </div>
 	  
-			  <div>
+			  <div class="servico">
 				<img src="assets/img/tst/marketing.png" alt="Uma logo de uma carta aberta com um auto falante saindo dele"
 				  class="imageIcone">
 				<h2>E-mail Marketing</h2>
@@ -113,19 +115,19 @@
 				  melhor desempenho</p>
 			  </div>
 	  
-			  <div>
+			  <div class="servico">
 				<img src="assets/img/tst/tecnologias.png" alt="Uma logo de um notebook" class="imageIcone">
 				<h2>Tecnologias</h2>
 				<p>Desenvolvimento através das melhores linguagens e tecnologias disponíveis na criação do seu projeto</p>
 			  </div>
 	  
-			  <div>
+			  <div class="servico">
 				<img src="assets/img/tst/design-grafico.png" alt="Uma logo de monitor com materiais na tela" class="imageIcone">
 				<h2>Design Gráfico</h2>
 				<p>Realização da comunicação visual impressa do seu projeto ou seu negócio</p>
 			  </div>
 	  
-			  <div>
+			  <div class="servico">
 				<img src="assets/img/tst/redes-sociais.png" alt="Uma logo de um celular usando redes sociais"
 				  class="imageIcone">
 				<h2>Redes Sociais</h2>
@@ -153,7 +155,7 @@
 				<h1>Projetos</h1>
 			</div>
 			<article>
-				<div>
+				<div class="project">
 					<h3>🚀 ReactJS: DevFlix</h3>
 					<p>O Devflix é uma aplicação web para o compartilhamento de vídeos sobre desenvolvimento e tecnologia em que é possível cadastrar novos vídeos e categorias.</p>
 					<img src="https://github.com/AlisonChs/Projeto-ReactJS-NetFlix/blob/master/github_assets/webgif.gif?raw=true" style="width: 100%;">
@@ -167,10 +169,10 @@
 					  </span>
 				</div>
 	  
-			  <div>
+			  <div class="project">
 				<h3>♟️ Java: Sistema de xadrez</h3>
 				<p>Este sistema de xadrez é um projeto pessoal para fixar meus conhecimentos da POO de Java, onde deixo o código aberto para modificações. Consiste apenas em uma versão back-end de um sistema de xadrez <b> completo. </b></b></p>
-					<img src="assets/img/chess-projeto.gif" border="0" style="width: 100%; margin-left: "/>
+					<img src="assets/img/chess-projeto.gif" border="0" style="width: 100%; ">
 				<span class="botoes-projetos">
 					<!--<a href="#" target="_blank">-->
 						<button class="aovivo-button" data-toggle="modal" data-target="#modal404"><i class="fa fa-link"></i> versão visual </button>
@@ -182,7 +184,7 @@
 				
 				</div>
 	  
-			  <div>
+			  <div class="project">
 				<h3>🧪 Site/Trabalho: Química</h3>
 				<p>Este foi um dos meus primeiros projetos dentro da ETEC, o objetivo era criar um website responsivo, em html e css extremamente básicos do tema "Química".</p>
 				<img src="assets/img/quimica-projeto.gif" style="width: 100%;"/>
@@ -348,7 +350,7 @@
 			mim, clique no botão "sobre" e leia! Tem sugestões? Envie-me abaixo!
 
 			<br><br><br>
-			<form action="http://etec199-2020-alisoncarvalho1.atwebpages.com/conexao.php" method="POST">
+			<form>
 				<div class="form-group">
 				<label for="recipient-name" class="col-form-label">Seu e-mail/nome:</label>
 				<input type="text" class="form-control" id="recipient-name">
@@ -361,7 +363,7 @@
 		</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-				<button type="submit"  id="botaoS" class="btn btn-primary" onclick="mudarBotaoObg()">Enviar sugestão</button>
+				<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#modal404"><button type="submit"  id="botaoS" class="btn btn-primary" onclick="mudarBotaoObg()">Enviar sugestão</button></a>
 			</form>
 			</div>
 		</div>
@@ -390,6 +392,29 @@
 		  <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="mudarModal()" data-toggle="modal" data-target="#modal-donate">Doar</button>
 		  <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#modal-logo">Sugestões</button>
 
+		</div>
+	  </div>
+	</div>
+  </div>
+
+  <!--Modal 404pp-->
+  <div class="modal fade" id="modal404pp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalLabel">Ops</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  Em reforma! <br><br>
+		  O site ainda está em manuntenção, e por isso algumas funções, como a de donate, ainda não estão finalizadas. Caso queira doar, pode entrar em contato com o autor pelo e-mail.<br><br>
+
+		  <br><br><br> <small class="text-muted">A reforma não tem data prévia de conclusão, mas está sendo feita diariamente.</small>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
 		</div>
 	  </div>
 	</div>
@@ -427,14 +452,9 @@
 			</div>
 
 			
-			<button type="button"  id="botaoSG" class="btn-modals" onclick="mudarBotaoObg()">Enviar sugestão</button>
-			<button type="button"  id="botaoD" class="btn-modals" onclick="esc('paypal-button-container'), mudarBotaoDonate()">Doar</button>
+			<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#modal404"><button type="button"  id="botaoSG" class="btn-modals" onclick="mudarBotaoObg()">Enviar sugestão</button></a>
+			<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#modal404pp"><button type="button"  id="botaoD" class="btn-modals" onclick="mudarBotaoDonate()">Doar</button></a>
 			
-			<div id="smart-button-container" style="max-width: 90%; margin-left: 5%;">
-				<div style="text-align: center;">
-				  <div id="paypal-button-container"></div>
-				</div>
-			  </div>
 			<button type="button" class="btn-modals" data-dismiss="modal" style="margin-bottom: 5%; margin-top: 10%;">Fechar</button>
 		</div>
 		</div>
@@ -460,7 +480,7 @@
 
 	<!--Texto Inicial Escondido-->
 
-	<div id="textoNaoCarregado">
+	<div id="textoNaoCarregado" style="text-align: center;">
 
 		<div class="title-card">
 			<h1>Olá!</h1>
@@ -474,7 +494,7 @@
 			</div>
 		</div> <br>
 
-		<a href="#" onclick="esc('contteiner'), esc('textoNaoCarregado')"><button class="btn btn-outline-light" style="margin-left: 42.5%;">Continuar com o website ↗</button></a>
+		<a href="#" onclick="esc('contteiner'), esc('textoNaoCarregado')"><button class="btn btn-outline-light">Continuar com o website ↗</button></a>
 
 	</div>
 
