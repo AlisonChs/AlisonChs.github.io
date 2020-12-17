@@ -475,16 +475,93 @@ body.dark #apresentacaoPortfolio #apresentacaoTexto h2{color:#f8f8f8}
 
 .botoes-projetos{position: absolute;}
 
-.aovivo-button{
-    background-color:#4070f4;
-    color:#fff;
-    padding: 10px 20px;
-    border:0;
-    font-weight:500;
-    font-size:14px;
-    border-radius:5px;
-    text-transform:uppercase;
-    cursor:pointer;
+.notificacaoLogo {
+    display: block;
+    border-radius:50%;
+    width:1.3em;
+    height:1.3em;
+    margin-left: 13%;
+    text-align:center;
+    margin-top: 20px;
+    float:left;
+    background-color: red;
+    color: white;
+    position: absolute;
+    animation: pisca .7s infinite;
 }
 
-#projetos article div .aovivo-button:hover{cursor:pointer;background-color:#3460da}
+#navMob #circulos {width: 50px; height: 50px;}
+
+#navMob hr {
+    animation: rodarTudo 2s;
+}
+
+.fecharLogo {
+    background-color:black;
+    color: white;
+    display: none;
+    width:1.6em;
+    height:1.6em;
+    text-align:center;
+    float:left;
+    position: absolute;
+    margin: 0;
+    animation: MoveUpDown 2s infinite;
+}
+
+.navmobile-item {
+    width: 100%;
+    text-align: center;
+}
+
+#home, #contato, #sobre, #donate {
+    margin-left: 2%;
+}
+
+#navMob {
+    display: none;
+}
+
+.navmobile-logo {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ @media (max-width: 800px) {
+     .notificacaoLogo {
+         visibility: hidden;
+     }
+
+     #tecnologias img {
+         width: 25%;
+         height: auto;
+         margin-left: 38%;
+     }
+
+     nav small {
+         display: none;
+         visibility: hidden;
+     }
+
+     #navPC  {
+         display: none;
+     }
+
+     #navMob {
+         display: block;
+         position: absolute;
+     }
+
+     #navMob #sobre, #navMob #contato, #navMob #donate, #navMob #home {
+         display: none;
+         text-align: center;
+         animation: rodarTudo 2s;
+     }
+ }
+
+
+
+ 

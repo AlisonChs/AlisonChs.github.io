@@ -19,38 +19,88 @@
 
 </head>
 
-<body onload="efeito(), esc('contteiner'), esc('paypal-button-container')">
+<body onload="efeito(), esc('contteiner'), esc('circulos')">
 
 	<div id="contteiner">
 
 		<div class="index-page1">
 
-			<!-- NavBar (MENU) -->
-			<nav class="nav nav-pills nav-fill fixed-top">
-				<li class="nav-item">
-				<a class="nav-link" href="index.html" alt="Home"><img src="assets/img/bootstrap-img/home.png"></a>
-				</li>
-				<li class="nav-item">
-				<a class="nav-link" href="sobre.html#contato">Contato</a>
-				</li>
-				<li class="nav-item">		  
-				<a class="nav-logo" href="#" alt="Logo" data-toggle="modal" data-target="#modal-logo"><img src="assets/img/logo2.png" class="logo"></a>
-				</li>
-				<li class="nav-item">
-				<a class="nav-link" href="sobre.html">Sobre</a>
-				</li>
-				<li class="nav-item">
-				<a class="nav-link" href="#" alt="Doar" data-toggle="modal" data-target="#modal-donate"><img src="assets/img/bootstrap-img/pay.png" style="margin-top: 50%;" class="btn-donate"></a>
-				<small class="text-muted" style="position: absolute; top: 41%;">Doar</small></p>
-				</li>
-			</nav>
+			<!-- NavBar's-->
 
-			<hr />
 
-			<!-- //navbar//-->
+				<!-- NabBar (PC)-->
+
+				<nav class="nav nav-pills nav-fill fixed-top" id="navPC" data-toggle="popover" data-timeout="3000" data-content="Clique na LOGO para ver o menu completo!" data-placement="bottom">
+					
+						<li class="nav-item">
+						<a class="nav-link" href="index.html" alt="Home" id="item-menu1" style="visibility: hidden;"><img src="assets/img/bootstrap-img/home.png"></a>
+						</li>
+						<li class="nav-item">
+						<a class="nav-link" href="sobre.html#contato" id="item-menu2" style="visibility: hidden;">Contato</a>
+						</li>
+
+						<a href="#" id="circulos">
+							<i class="notificacaoLogo">1</i>
+						</a>
+						<li class="nav-item">
+							<a class="nav-logo" alt="Logo" id="logoMenu" href="#" onclick="mostrarMenuPC(), fecharPopOverMenu(), esc('circulos')" onmouseover="mostrarPopOverMenu()"><img src="assets/img/logo2.png" class="logo"></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" style="visibility: hidden;" id="item-menu3" href="sobre.html">Sobre</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" style="visibility: hidden;" id="item-menu4" href="#" alt="Doar" data-toggle="modal" data-target="#modal-donate"><img src="assets/img/bootstrap-img/pay.png" style="margin-top: 50%;" class="btn-donate"></a>
+							<small class="text-muted" style="position: absolute; top: 41%;">Doar</small></p>
+						</li>
+
+				</nav> 
+
+				<!-- // NabBar (PC)-->
+
+				<!-- NabBar (MOBILE)-->
+
+				<nav class="nav nav-pills nav-fill fixed-top" id="navMob" >
+
+						<span id="circulos">
+							<i class="fecharLogo" id="fecharLogo" onclick="alterarMenuMob()">X</i>
+						</span>
+						
+						<li class="navmobile-logo">
+							<a class="nav-logo" id="logo" alt="Logo" href="#" onclick="alterarMenuMob()"><img src="assets/img/logo2.png" class="logo"></a>
+						</li>
+
+						<li class="navmobile-item">
+							<a class="nav-link" id="home" href="index.html" alt="Home"> HOME </a>
+						</li>
+
+						<hr id="hrNav-home" style="display: none; width: 30%; background-color: black;"/>
+
+						<li class="navmobile-item">
+							<a class="nav-link" id="contato" href="sobre.html#contato">Contato</a>
+						</li>
+
+						<hr id="hrNav-contato" style="display: none; width: 30%; background-color: black;" />
+
+						<li class="navmobile-item">
+							<a class="nav-link" id="sobre" href="sobre.html">Sobre</a>
+						</li>
+						
+						<hr id="hrNav-sobre" style="display: none; width: 30%; background-color: black;" />
+
+						<li class="navmobile-item">
+							<a class="nav-link" id="donate" href="#"> Doar </a>
+						</li>
+
+						<hr id="hrNav-donate" style="display: none; width: 60%; background-color: black;" />
+
+				</nav>
+
+				<!-- NabBar (MOBILE)-->
+
+			<!-- //NavBar's-->
 
 			<!--Apresentação Portfólio-->
-			<section id="apresentacaoPortfolio" class="index-page1">
+			<section id="apresentacaoPortfolio" class="index-page1" onclick="alterarMenuMob()">
 				<article id="apresentacaoTexto">
 				<h2>
 					Olá, eu sou o<br>
@@ -69,7 +119,6 @@
 				</article>
 			</section>
 		</div>
-
 
 		<hr style="margin-top: 60%;"/>
 
@@ -228,63 +277,66 @@
 
 		</div>
 
-		<div class="card-columns">
-			<div class="card">
-				<img src="assets/img/react-js.png" class="card-img-top" alt="...">
-				<div class="card-body">
-				<h5 class="card-title"> <b> <a href="https://pt-br.reactjs.org/docs/getting-started.html" target="_blank" style="color: rgb(255, 255, 255);">REACT JS </b></a></h5>
-				<p class="card-text">O <a href="https://pt-br.reactjs.org/docs/getting-started.html" target="_blank" style="color: rgb(255, 255, 255);">React</a> é a biblioteca mais popular do JavaScript e é usada para construir uma interface de usuário (IU). Ela oferece uma resposta excelente para o usuário adicionar comandos usando um novo método de renderizar sites.</p>
-				<p class="card-text"><small class="text-muted">Frame Work para FrontEnd</small></p>
+		<div id="tecnologias">
+
+			<div class="card-columns">
+				<div class="card">
+					<img src="assets/img/react-js.png" class="card-img-top" alt="...">
+					<div class="card-body">
+					<h5 class="card-title"> <b> <a href="https://pt-br.reactjs.org/docs/getting-started.html" target="_blank" style="color: rgb(255, 255, 255);">REACT JS </b></a></h5>
+					<p class="card-text">O <a href="https://pt-br.reactjs.org/docs/getting-started.html" target="_blank" style="color: rgb(255, 255, 255);">React</a> é a biblioteca mais popular do JavaScript e é usada para construir uma interface de usuário (IU). Ela oferece uma resposta excelente para o usuário adicionar comandos usando um novo método de renderizar sites.</p>
+					<p class="card-text"><small class="text-muted">Frame Work para FrontEnd</small></p>
+					</div>
 				</div>
-			</div>
-			<div class="card">
-				<img src="assets/img/mongo-db.png" class="card-img-top" alt="...">
-				<div class="card-body">
-				<h5 class="card-title"><b> <a href="https://docs.mongodb.com/" target="_blank" style="color: rgb(255, 255, 255);">MONGO DB </b></a></h5>
-				<p class="card-text"><b> <a href="https://docs.mongodb.com/" target="_blank" style="color: rgb(255, 255, 255);">Mongo DB</b></a> é um banco de dados orientado a documentos que armazena dados em documentos JSON com esquema dinâmico. Isso significa que você pode armazenar seus registros sem se preocupar com a estrutura de dados, como o número de campos ou tipos de campos para armazenar valores.</p>
-				<p class="card-text"><small class="text-muted">Banco de dados orientado a documentos (BackEnd)</small></p>
+				<div class="card">
+					<img src="assets/img/mongo-db.png" class="card-img-top" alt="...">
+					<div class="card-body">
+					<h5 class="card-title"><b> <a href="https://docs.mongodb.com/" target="_blank" style="color: rgb(255, 255, 255);">MONGO DB </b></a></h5>
+					<p class="card-text"><b> <a href="https://docs.mongodb.com/" target="_blank" style="color: rgb(255, 255, 255);">Mongo DB</b></a> é um banco de dados orientado a documentos que armazena dados em documentos JSON com esquema dinâmico. Isso significa que você pode armazenar seus registros sem se preocupar com a estrutura de dados, como o número de campos ou tipos de campos para armazenar valores.</p>
+					<p class="card-text"><small class="text-muted">Banco de dados orientado a documentos (BackEnd)</small></p>
+					</div>
 				</div>
-			</div>
-			<div class="card">
-				<img src="assets/img/angular-js.png" class="card-img-top" alt="...">
-				<div class="card-body">
-				<h5 class="card-title"> <b> <a href="https://docs.angularjs.org/" target="_blank" style="color: rgb(255, 255, 255);">ANGULAR JS </b> </a></h5>
-				<p class="card-text">O  <b> <a href="https://docs.angularjs.org/" target="_blank" style="color: rgb(255, 255, 255);">Angular JS </b> </a> é um framework open-source de desenvolvimento front-end que possibilita o desenvolvimento de aplicações web, com foco em simplificar tanto a codificação quanto o processo de teste. Além disso, é possível integrá-lo com bibliotecas famosas como o Bootstrap, D3.</p>
-				<p class="card-text"><small class="text-muted">Frame Work para FrontEnd</small></p>
+				<div class="card">
+					<img src="assets/img/angular-js.png" class="card-img-top" alt="...">
+					<div class="card-body">
+					<h5 class="card-title"> <b> <a href="https://docs.angularjs.org/" target="_blank" style="color: rgb(255, 255, 255);">ANGULAR JS </b> </a></h5>
+					<p class="card-text">O  <b> <a href="https://docs.angularjs.org/" target="_blank" style="color: rgb(255, 255, 255);">Angular JS </b> </a> é um framework open-source de desenvolvimento front-end que possibilita o desenvolvimento de aplicações web, com foco em simplificar tanto a codificação quanto o processo de teste. Além disso, é possível integrá-lo com bibliotecas famosas como o Bootstrap, D3.</p>
+					<p class="card-text"><small class="text-muted">Frame Work para FrontEnd</small></p>
+					</div>
 				</div>
-			</div>
-			<div class="card bg-primary text-white text-center p-3">
-				<blockquote class="blockquote mb-0">
-				<p>ALGUMAS DE NOSSAS TECNOLOGIAS </p>
-				<footer class="blockquote-footer text-white">
-					<small>
-					Nossas tecnologias de ponta utilizadas em nossos projetos.
-					</small>
-				</footer>
-				</blockquote>
-			</div>
-			<div class="card text-center">
-				<img src="assets/img/pacote-padrao.png" class="card-img-top" alt="...">
-				<div class="card-body">
-				<h5 class="card-title"><b>HTML5, CSS3 and JS</b></h5>
-				<p class="card-text">Esse grande tríade da Web ainda é necessário para todos(as) e fundamental para desenvolvimento de aplicações para Web. Elas funcionam da seguinte forma: O HTML é a base da programação (como se fosse o esqueleto o corpo) O CSS é o que dá estilo aos códigos (como se fosse a roupa que a pessoa utiliza) O Javascript é o que dá movimento e ação (como se fosse o espírito do corpo). Todos os pacotes que envolvem JS estão incluídos aqui.</p>
-				<p class="card-text"><small class="text-muted">Pacote FrontEnd: HTML, JS E CSS.</small></p>
+				<div class="card bg-primary text-white text-center p-3">
+					<blockquote class="blockquote mb-0">
+					<p>ALGUMAS DE NOSSAS TECNOLOGIAS </p>
+					<footer class="blockquote-footer text-white">
+						<small>
+						Nossas tecnologias de ponta utilizadas em nossos projetos.
+						</small>
+					</footer>
+					</blockquote>
 				</div>
-			</div>
-			<div class="card">
-				<img src="assets/img/node-js.png" class="card-img-top" alt="...">
-				<div class="card-body">
-				<h5 class="card-title"><b> <a href="https://nodejs.org/en/docs/" target="_blank" style="color: rgb(255, 255, 255);">NODE JS</a> </b></h5>
-				<p class="card-text">O <b> <a href="https://nodejs.org/en/docs/" target="_blank" style="color: rgb(255, 255, 255);">Node JS</a> </b> pode ser definido como um ambiente de execução Javascript server-side. Isso significa que com o Node. js é possível criar aplicações Javascript para rodar como uma aplicação standalone em uma máquina, não dependendo de um browser para a execução, como estamos acostumados.</p>
-				<p class="card-text"><small class="text-muted">Ambiente de execução Javascript server-side. (BackEnd)</small></p>
+				<div class="card text-center">
+					<img src="assets/img/pacote-padrao.png" class="card-img-top" alt="...">
+					<div class="card-body">
+					<h5 class="card-title"><b>HTML5, CSS3 and JS</b></h5>
+					<p class="card-text">Esse grande tríade da Web ainda é necessário para todos(as) e fundamental para desenvolvimento de aplicações para Web. Elas funcionam da seguinte forma: O HTML é a base da programação (como se fosse o esqueleto o corpo) O CSS é o que dá estilo aos códigos (como se fosse a roupa que a pessoa utiliza) O Javascript é o que dá movimento e ação (como se fosse o espírito do corpo). Todos os pacotes que envolvem JS estão incluídos aqui.</p>
+					<p class="card-text"><small class="text-muted">Pacote FrontEnd: HTML, JS E CSS.</small></p>
+					</div>
 				</div>
-			</div>
-			<div class="card">
-				<img src="assets/img/sql-server.png" class="card-img-top" alt="...">
-				<div class="card-body">
-				<h5 class="card-title"><b> <a href="https://docs.microsoft.com/pt-br/sql/sql-server/?view=sql-server-ver15" target="_blank" style="color: rgb(255, 255, 255);">SQL SERVER</a> </b></h5>
-				<p class="card-text">O Microsoft <b> <a href="https://docs.microsoft.com/pt-br/sql/sql-server/?view=sql-server-ver15" target="_blank" style="color: rgb(255, 255, 255);">SQL Server</a> </b> é um sistema gerenciador de Banco de dados relacional (SGBD) desenvolvido pela Sybase em parceria com a Microsoft. Esta parceria durou até 1994, com o lançamento da versão para Windows NT e desde então a Microsoft mantém a manutenção do produto.</p>
-				<p class="card-text"><small class="text-muted">Banco de dados relacional (BackEnd)</small></p>
+				<div class="card">
+					<img src="assets/img/node-js.png" class="card-img-top" alt="...">
+					<div class="card-body">
+					<h5 class="card-title"><b> <a href="https://nodejs.org/en/docs/" target="_blank" style="color: rgb(255, 255, 255);">NODE JS</a> </b></h5>
+					<p class="card-text">O <b> <a href="https://nodejs.org/en/docs/" target="_blank" style="color: rgb(255, 255, 255);">Node JS</a> </b> pode ser definido como um ambiente de execução Javascript server-side. Isso significa que com o Node. js é possível criar aplicações Javascript para rodar como uma aplicação standalone em uma máquina, não dependendo de um browser para a execução, como estamos acostumados.</p>
+					<p class="card-text"><small class="text-muted">Ambiente de execução Javascript server-side. (BackEnd)</small></p>
+					</div>
+				</div>
+				<div class="card">
+					<img src="assets/img/sql-server.png" class="card-img-top" alt="...">
+					<div class="card-body">
+					<h5 class="card-title"><b> <a href="https://docs.microsoft.com/pt-br/sql/sql-server/?view=sql-server-ver15" target="_blank" style="color: rgb(255, 255, 255);">SQL SERVER</a> </b></h5>
+					<p class="card-text">O Microsoft <b> <a href="https://docs.microsoft.com/pt-br/sql/sql-server/?view=sql-server-ver15" target="_blank" style="color: rgb(255, 255, 255);">SQL Server</a> </b> é um sistema gerenciador de Banco de dados relacional (SGBD) desenvolvido pela Sybase em parceria com a Microsoft. Esta parceria durou até 1994, com o lançamento da versão para Windows NT e desde então a Microsoft mantém a manutenção do produto.</p>
+					<p class="card-text"><small class="text-muted">Banco de dados relacional (BackEnd)</small></p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -295,7 +347,7 @@
 		<hr />	  
 
 	<!-- Modal Copyright -->
-		<div class="modal fade" id="modal-copy" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade" id="modal-copy" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-scrollable">
 			<div class="modal-content">
 			<div class="modal-header">
@@ -333,7 +385,7 @@
 			</div>
 			</div>
 		</div>
-		</div>
+	</div>
 
 	<!-- Modal inicial-logo-->
 	<div class="modal fade" id="modal-logo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -371,54 +423,54 @@
 	</div>
 
 	<!--Modal 404-->
-  <div class="modal fade" id="modal404" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h5 class="modal-title" id="exampleModalLabel">Ops</h5>
-		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		  </button>
-		</div>
-		<div class="modal-body">
-		  Desculpe! <br><br>
-		  O site ainda está em manuntenção, e por isso algumas funções ainda não estão finalizadas.<br><br>
-		  Envie-nos uma sugestão clicando na logo, ou faça um donate!
+	<div class="modal fade" id="modal404" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">Ops</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			</div>
+			<div class="modal-body">
+			Desculpe! <br><br>
+			O site ainda está em manuntenção, e por isso algumas funções ainda não estão finalizadas.<br><br>
+			Envie-nos uma sugestão clicando na logo, ou faça um donate!
 
-		  <br><br><br> <small class="text-muted">A reforma não tem data prévia de conclusão, mas está sendo feita diariamente.</small>
-		</div>
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-		  <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="mudarModal()" data-toggle="modal" data-target="#modal-donate">Doar</button>
-		  <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#modal-logo">Sugestões</button>
+			<br><br><br> <small class="text-muted">A reforma não tem data prévia de conclusão, mas está sendo feita diariamente.</small>
+			</div>
+			<div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+			<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="mudarModal()" data-toggle="modal" data-target="#modal-donate">Doar</button>
+			<button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#modal-logo">Sugestões</button>
 
+			</div>
 		</div>
-	  </div>
+		</div>
 	</div>
-  </div>
 
   <!--Modal 404pp-->
-  <div class="modal fade" id="modal404pp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h5 class="modal-title" id="exampleModalLabel">Ops</h5>
-		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		  </button>
-		</div>
-		<div class="modal-body">
-		  Em reforma! <br><br>
-		  O site ainda está em manuntenção, e por isso algumas funções, como a de donate, ainda não estão finalizadas. Caso queira doar, pode entrar em contato com o autor pelo e-mail.<br><br>
+	<div class="modal fade" id="modal404pp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">Ops</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			</div>
+			<div class="modal-body">
+			Em reforma! <br><br>
+			O site ainda está em manuntenção, e por isso algumas funções, como a de donate, ainda não estão finalizadas. Caso queira doar, pode entrar em contato com o autor pelo e-mail.<br><br>
 
-		  <br><br><br> <small class="text-muted">A reforma não tem data prévia de conclusão, mas está sendo feita diariamente.</small>
+			<br><br><br> <small class="text-muted">A reforma não tem data prévia de conclusão, mas está sendo feita diariamente.</small>
+			</div>
+			<div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+			</div>
 		</div>
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
 		</div>
-	  </div>
 	</div>
-  </div>
 
 	<!-- Modal donate-->
 	<div class="modal fade" id="modal-donate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -459,6 +511,17 @@
 		</div>
 		</div>
 	</div>
+
+	<div id="alerta">
+		teste
+	</div>
+
+	<script type="text/javascript">
+		setTimeout(function(){
+   			//Esconde a div
+   			$('#alerta').hide();
+		}, 5000);
+	</script>
 	
 		
 
@@ -500,8 +563,10 @@
 
 	<!-- Scripts para o uso do bootstrap -->
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	 <!-- Primeiro o jQuery, depois o Popper.js, e depois o Bootstrap JS -->
+	 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.js"></script>
 	<script type="text/javascript" src="assets/js/index.js"></script>
 </body>
 
