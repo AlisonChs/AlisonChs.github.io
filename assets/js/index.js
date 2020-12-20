@@ -47,6 +47,23 @@ function mostrarMenuPC () {
 
 }
 
+function mudarPCinza (aq) {
+	document.getElementById(aq).style.color = "gray";
+}
+
+function mudarPBranco (aq) {
+	document.getElementById(aq).style.color = "white";
+}
+
+function voltarCorOriginal(aq) {
+	document.getElementById(aq).style.color = "unset";
+}
+
+function mudarPPreto (aq) {
+	document.getElementById(aq).style.color = "black";
+}
+
+
 function alterarMenuMob () {
 	var display = document.getElementById('logo').style.display;
 
@@ -81,10 +98,11 @@ function alterarMenuMob () {
 	}
 
 }
+
+var posicao = 0;
+var mensagem = "< O futuro é agora.     <br>Você precisa de inovação.       <br>Você precisa de controle.>      <br><a href='#'>Contribua</a> ou faça um orçamento. <br></>";
   
 function efeito() {
-	var posicao = 0;
-	var mensagem = "< O futuro é agora.     <br>Você precisa de inovação.       <br>Você precisa de controle.>      <br><a href='#'>Contribua</a> ou faça um orçamento. <br></>                 ";  // Digite entre as aspas o que você quiser, inclusive tags HTML.
 
 	document.getElementById("mensagem-inicio").innerHTML = mensagem.substring(posicao,mensagem,length);
 	posicao++;

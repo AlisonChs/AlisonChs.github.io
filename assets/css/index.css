@@ -405,9 +405,10 @@ body.dark #apresentacaoPortfolio #apresentacaoTexto h2{color:#f8f8f8}
     margin-top: 30%;
 }
 
-#projetos #linkRepo{
+#linkRepo{
     color:white;
-    font-size:18px
+    font-size:18px;
+    text-align: center;
 }
 
 #projetos h2{
@@ -488,6 +489,10 @@ body.dark #apresentacaoPortfolio #apresentacaoTexto h2{color:#f8f8f8}
     color: white;
     position: absolute;
     animation: pisca .7s infinite;
+}
+
+.caps-lock {
+    text-transform: uppercase;
 }
 
 #navMob #circulos {width: 50px; height: 50px;}

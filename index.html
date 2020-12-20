@@ -8,7 +8,8 @@
 
 	<!-- link para os outros arquivos CSS -->
 	<link href="assets/css/main.css" rel="stylesheet">
-
+	<script src="https://kit.fontawesome.com/7974d9d101.js" crossorigin="anonymous"></script>
+	
 	<meta charset="UTF-8">
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -26,7 +27,6 @@
 		<div class="index-page1">
 
 			<!-- NavBar's-->
-
 
 				<!-- NabBar (PC)-->
 
@@ -108,7 +108,7 @@
 					<span>Desenvolvedor FullStack e designer.</span>
 				</h2>
 				<a href="sobre.html">
-					<i style="font-size: 22px" class="fa fa-github"></i>Leia sobre mim
+					Leia sobre mim <i class='fas fa-ghost' style='font-size:20px; margin-left: 8px;'></i>
 				</a>
 				</article>
 		
@@ -184,6 +184,12 @@
 				  público-alvo</p>
 			  </div>
 			</article>
+
+			<!-- Texto não quer alinhar, gambiarra temporária feita --> <br><br>
+			<a href="#" target="_blank" style="margin-left: 38%; margin-top: 3.5%;" id="linkRepo">Faça um orçamento / Agende uma entrevista</a><br>
+			<br>
+			<i class='fas fa-puzzle-piece' id="quad-serv" style="font-size:30px; margin-left: 50%;" onmouseover="mudarPBranco('quad-serv')" onload="mudarPCinza('quad-serv')" onmouseout="mudarPCinza('quad-serv')"></i>
+
 		  </section>
 
 		<hr />
@@ -209,11 +215,11 @@
 					<p>O Devflix é uma aplicação web para o compartilhamento de vídeos sobre desenvolvimento e tecnologia em que é possível cadastrar novos vídeos e categorias.</p>
 					<img src="https://github.com/AlisonChs/Projeto-ReactJS-NetFlix/blob/master/github_assets/webgif.gif?raw=true" style="width: 100%;">
 					<span class="botoes-projetos">
-						<!--<a href="#" target="_blank">-->
-						  <button class="aovivo-button" data-toggle="modal" data-target="#modal404"><i class="fa fa-link"></i> website </button>
-						<!--</a>-->
+						<a href="https://5fdb5bd60fb1c7207cd68b22--devflix-alisonchristian.netlify.app" target="_blank">
+						  <button class="btn btn-dark caps-lock"><i class="fa fa-link"></i> website </button>
+						</a>
 						<a href="https://github.com/AlisonChs/Projeto-ReactJS-NetFlix" target="_blank">
-						  <button class="aovivo-button"><i class="fa fa-github"></i> github </button>
+						  <button class="btn btn-warning caps-lock"><i class="fa fa-github" style="font-size: 22px"></i> github </button>
 						</a>
 					  </span>
 				</div>
@@ -223,11 +229,11 @@
 				<p>Este sistema de xadrez é um projeto pessoal para fixar meus conhecimentos da POO de Java, onde deixo o código aberto para modificações. Consiste apenas em uma versão back-end de um sistema de xadrez <b> completo. </b></b></p>
 					<img src="assets/img/chess-projeto.gif" border="0" style="width: 100%; ">
 				<span class="botoes-projetos">
-					<!--<a href="#" target="_blank">-->
+					<!--<a href="#" target="_blank">
 						<button class="aovivo-button" data-toggle="modal" data-target="#modal404"><i class="fa fa-link"></i> versão visual </button>
-					<!--</a>-->
+					</a>-->
 					<a href="https://github.com/AlisonChs/Sistema-De-Xadrez-JAVA" target="_blank">
-						<button class="aovivo-button"><i class="fa fa-github"></i> github </button>
+						<button class="btn btn-warning caps-lock"><i class="fa fa-github" style="font-size: 22px"></i> github </button>
 					</a>
 				</span>
 				
@@ -240,11 +246,11 @@
 			
 				<span class="botoes-projetos">
 					<a href="http://etec199-2020-alisoncarvalho1.atwebpages.com/projeto_quimica/index.html" target="_blank">
-						<button class="aovivo-button"><i class="fa fa-link"></i> site </button>
+						<button class="btn btn-dark caps-lock"><i class="fa fa-link"></i> website </button>
 					</a>
-					<!--<a href="#" target="_blank">-->
+					<!--<a href="#" target="_blank">
 						<button class="aovivo-button" data-toggle="modal" data-target="#modal404"><i class="fa fa-github"></i> github </button>
-					<!--</a>-->
+					</a>-->
 				</span>
 			</div>
 	  
@@ -265,6 +271,10 @@
 			</article>
 	  
 			<a href="https://github.com/alisonchs?tab=repositories" target="_blank" id="linkRepo">Repositórios no GitHub</a>
+			
+			<br><br>
+			<i class="fa fa-github" style="font-size: 26px"> </i>
+
 		  </section>
 
 		<hr  style="margin-bottom: 30%;"/>
@@ -531,7 +541,10 @@
 
 			<div class="copy-text">
 
+				<br>
 				<a href="#" target="_blank" data-toggle="modal" data-target="#modal-copy" class="copy-mit">Alison Ch.'s © 2020 </a>| Estudante da <a href="http://www.etecct.com.br/" target="_blank" class="etecct-link"> ETEC CT</a>.
+				<br><br>
+				<i class='fas fa-dice-d6' id="quad-copy" style='font-size:24px;' onmouseover="mudarPBranco('quad-copy')" onmouseout="voltarCorOriginal('quad-copy')"></i>
 
 			</div>
 
