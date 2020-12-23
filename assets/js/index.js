@@ -27,6 +27,16 @@ function esc(el) {
 
 }
 
+function animation_index () {
+	$("#contteiner").hide();
+	$("#textoNaoCarregado").show();
+
+	setTimeout(function() { $("#textoNaoCarregado").hide(); }, 10000);
+
+	setTimeout(function() { $("#contteiner").show(); }, 11000);
+	
+}
+
 function mostrarMenuPC () {
 
 	document.getElementById('navPC').style.width = "100%";

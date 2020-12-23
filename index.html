@@ -20,7 +20,7 @@
 
 </head>
 
-<body onload="efeito(), esc('contteiner'), esc('circulos')">
+<body onload="efeito(), animation_index()">
 
 	<div id="contteiner">
 
@@ -553,24 +553,20 @@
 
 	</div>
 
+	 <!-- jQUery-->
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
 	<!--Texto Inicial Escondido-->
 
 	<div id="textoNaoCarregado" style="text-align: center;">
 
-		<div class="title-card">
+		<div class="title-card" style="margin-bottom: 5%;">
 			<h1>Olá!</h1>
 			<p>Este projeto de website era um trabalho escolar anteriormente, e agora está sendo <br> modificado para ser meu portfólio. Está sendo feito utilizando apenas de HTML, CSS, JS e BootStrap. <br> Clique no logotipo quando carregar o website!
-			<br><br>Clique no botão para continuar!</p>
 		</div>
 
-		<div class="text-center">
-			<div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
-				<span class="sr-only">Loading...</span>
-			</div>
-		</div> <br>
-
-		<a href="#" onclick="esc('contteiner'), esc('textoNaoCarregado')"><button class="btn btn-outline-light">Continuar com o website ↗</button></a>
-
+		<div class="barra"></div>
+	
 	</div>
 
 	<!-- Scripts para o uso do bootstrap -->
