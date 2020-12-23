@@ -30,8 +30,6 @@ function esc(el) {
 function mostrarMenuPC () {
 
 	document.getElementById('navPC').style.width = "100%";
-
-	document.getElementById('fecharLogo').style.display = "none";
 	
 	document.getElementById('item-menu1').style.visibility = "visible";
 	document.getElementById('item-menu1').style.animation = "fadeIn 3s ease-in-out";
@@ -79,7 +77,6 @@ function alterarMenuMob () {
 		document.getElementById('hrNav-sobre').style.display = 'none';
 		document.getElementById('hrNav-donate').style.display = 'none';
 		document.getElementById('navMob').style.backgroundColor = '#1C1C1C';
-		document.getElementById('fecharLogo').style.display = 'none';
 	}
 
 	else {
@@ -94,9 +91,12 @@ function alterarMenuMob () {
 		document.getElementById('hrNav-sobre').style.display = 'block';
 		document.getElementById('hrNav-donate').style.display = 'block';
 		document.getElementById('navMob').style.backgroundColor = '#0d0d0d';
-		document.getElementById('fecharLogo').style.display = 'block';
 	}
 
+}
+
+function fecharLogo () {
+	document.getElementById('fecharLogo').style.display = 'none';
 }
 
 var posicao = 0;

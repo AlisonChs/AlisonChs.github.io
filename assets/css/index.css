@@ -119,7 +119,17 @@ a:hover {
     -webkit-animation: fadeIn 3s ease-in-out;
 	-moz-animation: fadeIn 3s ease-in-out;
 	-o-animation: fadeIn 3s ease-in-out;
-	animation: fadeIn 3s ease-in-out;
+    animation: fadeIn 3s ease-in-out;
+}
+
+@media (min-width: 1000px) {
+    #contteiner {
+        zoom: 70%;
+    }
+
+    #apresentacaoTexto {
+        margin-top: 15%;
+    }
 }
 /* Keyframes usados para animar o site */
 
@@ -197,6 +207,14 @@ a:hover {
     height: 40px;
     margin-left: 5%;
     font-size: medium;
+}
+
+.icoLinks {
+    color: gray;
+}
+
+.icoLinks:hover {
+    color: white;
 }
 
 .botaoS-sucesso:active, .botaoS-sucesso:focus, .quantia-donate:active, .texto-donate:active, .quantia-donate:focus, .texto-donate:focus, .quantia-donate, .texto-donate, button{
@@ -405,10 +423,14 @@ body.dark #apresentacaoPortfolio #apresentacaoTexto h2{color:#f8f8f8}
     margin-top: 30%;
 }
 
-#linkRepo{
+.linkRepo{
     color:white;
     font-size:18px;
     text-align: center;
+}
+
+.linkRepo:hover {
+    color: white;
 }
 
 #projetos h2{
