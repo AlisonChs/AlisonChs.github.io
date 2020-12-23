@@ -122,11 +122,6 @@ a:hover {
     animation: fadeIn 3s ease-in-out;
 }
 
-@media (min-width: 1000px) {
-    #apresentacaoTexto {
-        margin-top: 15%;
-    }
-}
 /* Keyframes usados para animar o site */
 
 @-webkit-keyframes fadeIn {
