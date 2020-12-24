@@ -5,6 +5,7 @@ body, html {
 }
 
 .logo {
+    transition: all 3s;
     height: 120px;
     margin-top: 2%;
     display: inline-block;
@@ -120,9 +121,11 @@ a:hover {
 	-moz-animation: fadeIn 3s ease-in-out;
 	-o-animation: fadeIn 3s ease-in-out;
     animation: fadeIn 3s ease-in-out;
+    display: none;
 }
 
-#textoNaoCarregado:after {
+#textoNaoCarregado::after {
+    transition: all 4s;
     animation: fadeIn 3s;
 }
 /* Keyframes usados para animar o site */
@@ -258,7 +261,7 @@ a:hover {
 }
 
 #apresentacaoPortfolio #apresentacaoFoto{
-    width:60%;
+    width:40%;
     height:100vh;
     right: 0;
 }
@@ -583,6 +586,15 @@ body.dark #apresentacaoPortfolio #apresentacaoTexto h2{color:#f8f8f8}
      }
  }
 
+ @media (min-width: 1000px) {
+    #logoMenu {
+        position: absolute;
+        margin-top: 0;
+        margin-left: 38%;
+        transition: all 6s;
+    }
+ }
+
  .barra {
     height: 16px;
     width: 50%;
@@ -595,7 +607,7 @@ body.dark #apresentacaoPortfolio #apresentacaoTexto h2{color:#f8f8f8}
  /* move o backgrount para mostrar apenas a primeira cor */
     background-position: 99% 0;
  /* animação que move o background para mostrar a segunda cor */
-    animation: anima 11s ease-in-out infinite;
+    animation: anima 14s ease-in-out infinite;
  /* coloquei 500ms de delay para vc poder ver a barra 100% "vazia" antes de iniciar a animação */
 
 

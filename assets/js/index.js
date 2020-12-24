@@ -28,21 +28,27 @@ function esc(el) {
 }
 
 function animation_index () {
-	$("#contteiner").hide();
 	$("#textoNaoCarregado").show();
 
-	setTimeout(function() { $("#textoNaoCarregado").hide(); }, 10000);
+	setTimeout(function() { $("#textoNaoCarregado").hide(); }, 13000);
 
-	setTimeout(function() { $("#contteiner").show(); }, 11000);
+	setTimeout(function() { $("#contteiner").css("display", "block"); }, 14000);
 	
+}
+
+function pularInicial () {
+	setTimeout(function() { $("#textoNaoCarregado").hide(); }, 500);
+	setTimeout(function() { $("#contteiner").css("display", "block"); }, 1000);
 }
 
 function mostrarMenuPC () {
 
+	document.getElementById('navPC').style.backgroundColor = "#1C1C1C";
+
 	document.getElementById('navPC').style.width = "100%";
-	
-	document.getElementById('item-menu1').style.visibility = "visible";
-	document.getElementById('item-menu1').style.animation = "fadeIn 3s ease-in-out";
+
+	document.getElementById('logoMenu').style.position = "static";
+	document.getElementById('logoMenu').style.margin = "0";
 
 	document.getElementById('item-menu2').style.visibility = "visible";
 	document.getElementById('item-menu2').style.animation = "fadeIn 3s ease-in-out";
@@ -122,24 +128,3 @@ function efeito() {
 	
 	setTimeout("efeito()", 130);
 }
-
-// gambiarras
-
-function mostrarPopOverMenu () {
-	$('#navPC').popover('show')
-}
-
-function fecharPopOverMenu(){
-	$('#navPC').popover('disable');
-	$('#navPC').popover('dispose');
-	$('#navPC').popover('hide');
-}
-
-// /gambiarras
-
-$('[data-toggle="popover"][data-timeout]').on('shown.bs.popover', function() {
-    this_popover = $(this);
-    setTimeout(function () {
-        this_popover.popover('hide');
-    }, $(this).data("timeout"));
-});

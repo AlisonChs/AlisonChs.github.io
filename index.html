@@ -20,7 +20,22 @@
 
 </head>
 
-<body onload="efeito(), animation_index()">
+<body onload="animation_index(), efeito()">
+
+	<!--Texto Inicial Escondido-->
+
+	<div id="textoNaoCarregado" style="text-align: center;">
+
+		<div class="title-card" style="margin-bottom: 5%;">
+			<h1>Olá!</h1>
+			<p>Este projeto de website era um trabalho escolar anteriormente, e agora está sendo <br> modificado para ser meu portfólio. Está sendo feito utilizando apenas de HTML, CSS, JS e BootStrap. <br> Clique no logotipo quando carregar o website!
+		</div>
+
+		<div class="barra"></div>
+
+		<button class="btn btn-outline-light" style="margin-top: 4%;" onclick="pularInicial()">Pular ↗</button>
+	
+	</div>
 
 	<div id="contteiner">
 
@@ -31,23 +46,23 @@
 				<!-- NabBar (PC)-->
 
 				<nav class="nav nav-pills nav-fill fixed-top" id="navPC" data-toggle="popover" data-timeout="3000" data-content="Clique na LOGO para ver o menu completo!" data-placement="bottom">
+
+					<li class="nav-item">
+						<a class="nav-logo" alt="Logo" id="logoMenu" href="#" onclick="mostrarMenuPC()"><img src="assets/img/logo2.png" class="logo"></a>
+					</li>
 					
-						<li class="nav-item">
-						<a class="nav-link" href="index.html" alt="Home" id="item-menu1" style="visibility: hidden;"><img src="assets/img/bootstrap-img/home.png"></a>
-						</li>
-						<li class="nav-item">
+					<li class="nav-item">
 						<a class="nav-link" href="sobre.html#contato" id="item-menu2" style="visibility: hidden;">Contato</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-logo" alt="Logo" id="logoMenu" href="#" onclick="mostrarMenuPC(), fecharPopOverMenu()" onmouseover="mostrarPopOverMenu()"><img src="assets/img/logo2.png" class="logo"></a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" style="visibility: hidden;" id="item-menu3" href="sobre.html">Sobre</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" style="visibility: hidden;" id="item-menu4" href="#" alt="Doar" data-toggle="modal" data-target="#modal-donate"><img src="assets/img/bootstrap-img/pay.png" style="margin-top: 50%;" class="btn-donate"></a>
-							<small class="text-muted" style="position: absolute; top: 41%;">Doar</small></p>
-						</li>
+					</li>
+						
+					<li class="nav-item">
+						<a class="nav-link" style="visibility: hidden;" id="item-menu3" href="sobre.html">Sobre</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" style="visibility: hidden;" id="item-menu4" href="#" alt="Doar" data-toggle="modal" data-target="#modal-donate"><img src="assets/img/bootstrap-img/pay.png" style="margin-top: 50%;" class="btn-donate"></a>
+						<small class="text-muted" style="position: absolute; top: 41%;">Doar</small></p>
+					</li>
 
 				</nav> 
 
@@ -556,19 +571,6 @@
 	 <!-- jQUery-->
 	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-	<!--Texto Inicial Escondido-->
-
-	<div id="textoNaoCarregado" style="text-align: center;">
-
-		<div class="title-card" style="margin-bottom: 5%;">
-			<h1>Olá!</h1>
-			<p>Este projeto de website era um trabalho escolar anteriormente, e agora está sendo <br> modificado para ser meu portfólio. Está sendo feito utilizando apenas de HTML, CSS, JS e BootStrap. <br> Clique no logotipo quando carregar o website!
-		</div>
-
-		<div class="barra"></div>
-	
-	</div>
-
 	<!-- Scripts para o uso do bootstrap -->
 
 	 <!-- Primeiro o jQuery, depois o Popper.js, e depois o Bootstrap JS -->
@@ -579,3 +581,4 @@
 </body>
 
 </html>
+
