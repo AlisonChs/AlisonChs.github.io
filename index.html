@@ -37,7 +37,7 @@
 	
 	</div>
 
-	<div id="contteiner">
+	<div id="contteiner" style="display: none;">
 
 		<div class="index-page1">
 
@@ -46,13 +46,17 @@
 				<!-- NabBar (PC)-->
 
 				<nav class="nav nav-pills nav-fill fixed-top" id="navPC" data-toggle="popover" data-timeout="3000" data-content="Clique na LOGO para ver o menu completo!" data-placement="bottom">
-
-					<li class="nav-item">
-						<a class="nav-logo" alt="Logo" id="logoMenu" href="#" onclick="mostrarMenuPC()"><img src="assets/img/logo2.png" class="logo"></a>
-					</li>
 					
 					<li class="nav-item">
+						<a class="nav-link" href="#" id="item-menu0" style="visibility: hidden;" >Início</a>
+					</li>
+
+					<li class="nav-item">
 						<a class="nav-link" href="sobre.html#contato" id="item-menu2" style="visibility: hidden;">Contato</a>
+					</li>
+
+					<li class="nav-item nav-logo-li">
+						<a class="nav-logo" alt="Logo" id="logoMenu" href="#" onclick="mostrarMenuPC()"><img src="assets/img/logo2.png" class="logo"></a>
 					</li>
 						
 					<li class="nav-item">
