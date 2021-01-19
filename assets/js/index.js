@@ -47,17 +47,19 @@ function mostrarMenuPC () {
 
 	document.getElementById('navPC').style.width = "100%";
 
-	document.getElementById('logoMenu').style.position = "static";
-	document.getElementById('logoMenu').style.margin = "0";
+	document.getElementById('logoMenu').style.animation = "none";
 
 	document.getElementById('item-menu2').style.visibility = "visible";
-	document.getElementById('item-menu2').style.animation = "fadeIn 3s ease-in-out";
+	document.getElementById('item-menu2').style.animation = "go-back1 2s";
 
 	document.getElementById('item-menu3').style.visibility = "visible";
-	document.getElementById('item-menu3').style.animation = "fadeIn 3s ease-in-out";
+	document.getElementById('item-menu3').style.animation = "go-back2 2s";
 
 	document.getElementById('item-menu4').style.visibility = "visible";
-	document.getElementById('item-menu4').style.animation = "fadeIn 3s ease-in-out";
+	document.getElementById('item-menu4').style.animation = "go-back3 2s";
+
+	document.getElementById('item-menu0').style.visibility = "visible";
+	document.getElementById('item-menu0').style.animation = "go-back4 2s";
 
 }
 
